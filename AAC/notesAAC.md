@@ -1,5 +1,5 @@
 # Chapitre1: 
-### def:
+### Def:
 un laog est suitre fini d'operatoins elementaire constituant un schema
 de calcul ou de resolution d'une problem
 ### Correct & Complet
@@ -11,12 +11,12 @@ de calcul ou de resolution d'une problem
 
 complexite minimal(temps et espace)
 
-### complexite temps: 
+### Complexite temps: 
 temps de calcul
-### complexite spatial:
+### Complexite spatial:
 l'espace memoire
 
-### complexite pratique:
+### Complexite pratique:
 precise a une machine donne
 
 ## Complexe theorique
@@ -43,7 +43,7 @@ en s'interessse au cas le plus defavorable
 une operation qui prend un temps fini(arithmetiques,acees aux donnee,
 sauts conditionnels et inconditionnels.
 
-$T(n)=T_{l1}+T_{l2} +T{l3}+...$
+$T(n)=T_{l1}+T_{l2} +T_{l3}+...$
 ### Conditionnel:
 
 	si cond alors 
