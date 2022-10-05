@@ -5,14 +5,48 @@ package tp12;
 
 import java.io.IOException;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
-    public static void main(String[] args) throws IOException {
-        System.out.println(new App().getGreeting());
-        Client client=new Client(4446);
-        client.send("ay letd","127.0.0.1",4445);
+public class App {
+    public static void main(String[] args) throws Exception {
+        //
+        //for executing p2
+        //
+        if(args[0].equals("p2") && args[1].equals("1")){
+            System.out.println("=================P2==============");
+            Client client=new Client(4446);
+
+            if(args[1].equals("1")){
+                System.out.println("=================P2==============");
+                client.sendString("hello i am process p2 at "+ client.getPort(),"127.0.0.1",4445);
+                client.receive();}
+
+            if(args[1].equals("2")){
+                int i=1;
+                while(true){
+                client.sendInt(i,"127.0.0.1",4445);
+                    i++;
+                }
+            }
+        }
+        //
+        //for exectuing p1
+        //
+        if (args[0].equals("p1")) {
+            System.out.println("=================P1==============");
+
+            Client client=new Client(4445);
+
+            if(args[1].equals("1")){
+                // a thread to wait asyn for a message
+                client.receive();
+                client.sendString("hello i am process p1 at "+client.getPort() ,"127.0.0.1",4446);
+                //            System.out.println("waiting for 9 seconds");
+                ///           TimeUnit.SECONDS.sleep(9);
+            }
+
+            if(args[1].equals("2")){
+
+            }
+        }
     }
 }

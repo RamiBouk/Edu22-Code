@@ -3,7 +3,7 @@
  *
  * This generated file contains a sample Java application project to get you started.
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
- * User Manual available at https://docs.gradle.org/7.3/userguide/building_java_projects.html
+ * User Manual available at https://docs.gradle.org/7.4.2/userguide/building_java_projects.html
  */
 
 plugins {
@@ -18,18 +18,21 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 
     // This dependency is used by the application.
     implementation("com.google.guava:guava:30.1.1-jre")
 }
+
+application {
+    // Define the main class for the application.
+    mainClass.set("tp2.App")
+}
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
 }
-application {
-    // Define the main class for the application.
-    mainClass.set("tp12.App")
-}
+
+
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.

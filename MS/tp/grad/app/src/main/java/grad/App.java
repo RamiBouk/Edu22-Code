@@ -43,6 +43,7 @@ public class App {
     public static void main(String[] args) {
         int n=5,i=0,x=1 ;
         // declaration init i
+        System.out.print("donner la valeur initial: ");
         Scanner keyboard=new Scanner(System.in);
         x=keyboard.nextInt();
         System.out.print(x);
@@ -59,7 +60,6 @@ public class App {
             System.out.println("counter totale:");
             for(int j=0;j<counter.length;j++)
                 System.out.println("x"+(j+1)+": "+counter[j]);
-            System.out.print(counter);
     }
 
 }
