@@ -1,5 +1,5 @@
 # Distrubuted systems
-##Definition
+## Definition
 n software compuonents that are running on m computers but run as 1 system where n,m>1
 
 The goal is to make a network work as a single computer
@@ -41,12 +41,16 @@ the two defining properties:
 - set<ordi> connecte communiquent via message
 - apparait come une seule entite
 
-##architecture:
-application: |----|-----|----|
+## architecture:
 
-midleware:   |              |
+|app| |app|
 
-sys de coms: |    |    |    |
+|----|-----|----|
+
+|  middle ware       |
+
+|coms|    |com|
+
 
 ###middleware:
 - masquer le'heterogeneite des machines et systemes
@@ -80,13 +84,30 @@ est ce que l'emetteur est le recepteur ont le meme temps
 6. le maintien de la consistance des ressources:
 7. le transparence
 8. la tolerance aux fautes et la gestion
+# missed a course here
+## la loi de $X _{n}$
+n devinie l'instan et c'est auddi le nombre des pas
+cette loi pemet de calculer la valeeur de la probabilte d'une tell
+chaine.
+
+in other words the $X _{n}$ is a vecteur of the likelehoood that the 
+${n}$ step is in on state
 
 
 
+## La convergence 
+c'est apres une ceraine etats les etats son;t les meme 
 
+## Mesure de probabilte invariante 
+### def:
+check the course 
+also :
+ 
+is it $X _{n}\times P\ or\ P\times X _{n}= X _{n+1}$
 
-
-
+note:
+$X _{n}$ doesn't mean anything without the the $X _{0}$ or something
+that is less then n 
 
 
 
