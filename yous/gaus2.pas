@@ -5,7 +5,7 @@ var
   A: matrix;
   t:real;
   i,n,j,d:Integer;
-(*__________________________________________*)
+  (*__________________________________________*)
   function det(M: matrix;n:Integer): real;
 
 var
@@ -34,7 +34,7 @@ res:=res+m1-m2;
   end;
   Write('det = ');
   WriteLn(res);
-det:= res;
+  det:= res;
 end;
 (*________________________________________________*)
 procedure show(M: matrix;n:Integer);
@@ -67,30 +67,24 @@ begin
   Write(']<=');
   ReadLn(A[i,j]);
 end;
+(* testing if det(A)==0*)
 if det(A,n)=0 then
-  begin
+begin
   writeln('matrix doesnt have an inverse '); 
   exit;
 end; 
-(*initializing B*)
+(*making the extended matrix*)
 for d:=0 to n-1 do
   A[d,n+d]:=1;
 Writeln('extended matrix:');
 show(A,n);
-(*
-for i:=0 to n-1 do 
-begin  
-Write('B['+i+']<=');
-ReadLn(B[i]);
-    end;*)
-    (*calc*)
+    (*makind the diag ones by deviding over the value in the diag*)
     for d:=0 to n-1 do
     begin  
   t:=A[d,d];
-  (* diag is 1*)
   for j :=d to 2*n-1 do
     A[d,j]:=A[d,j]/t;
-  (* botom traingul is null*)
+(*making the bottom and top triang zeroes*)
   for i:=0 to n-1 do 
   if i<>d then
   begin 
@@ -99,9 +93,9 @@ for j :=0 to 2*n-1 do
 A[i,j]:=A[i,j]-t*A[d,j];
        end;
      end;
-     (*solve the equation*)
+(*solve the equation*)
 
      WriteLn('results: ');
      show(A,n);
 
-   end.
+end.
