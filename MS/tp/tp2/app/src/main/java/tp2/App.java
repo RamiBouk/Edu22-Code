@@ -4,37 +4,49 @@
 package tp2;
 
 public class App {
-    public static float multi1D(float[] A,float[]B){
-        float sum =0;
+    public static double multi1D(double[] A,double[]B){
+        double sum =0;
         for(int i =0;i<=B.length-1;i++){
             sum+=A[i]*B[i];
-            System.out.println("sum is "+sum);
         }
         return sum ;
     }
-    public static float[][] multi(float[][] A, float[][] B){
-        float [][] sol=new float[A.length][B[0].length];
-        float sum;
+    public static double[][] multi(double[][] A, double[][] B){
+        double [][] sol=new double[A.length][B[0].length];
+        double sum;
         int b =B.length;
-        float [] Bc=new float[b];
+        double [] Bc=new double[b];
         for(int i =0;i<A.length;i++){
             for (int j = 0; j < B[i].length; j++) {
                 sum=0;
                 for (int j2 = 0; j2 < B.length; j2++) {
                     Bc[j2]=B[j2][j];
-                }
-                
+                } 
                     sol[i][j] =multi1D(A[i], Bc);
-                    System.out.println(sol[i][j]);
             }}
 
         return sol;
 
     }
+    public static double[][] pow(double[][] A, int n){
+        for (int i = 0; i < n; i++) {
+            A=multi(A, A); 
+        }
+        return A;
+    }
     public static void main(String[] args) {
-        float [][] a ={{1,2},{1,1}};
-        float [][] b ={{1},{2}};
-        System.out.println(a.length);
-        System.out.println(multi(a, b));
+        double [][] a ={{1,2},{1,1}};
+        double [][] b ={{0.2,0.5}};
+
+        // calculating
+        double [][] sol=multi(b,a);
+
+        // printing 
+        for (int i = 0; i < sol.length; i++) {
+          for (int j = 0; j < sol[0].length; j++) 
+              System.out.print(sol[i][j]+" | "); 
+          System.out.println();
+        }
+
     }
 }
