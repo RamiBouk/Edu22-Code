@@ -11,19 +11,21 @@ public class App {
         //
         //for executing p2
         //
-        if(args[0].equals("p2") && args[1].equals("1")){
+        if(args[0].equals("p2")){
             System.out.println("=================P2==============");
             Client client=new Client(4446);
 
             if(args[1].equals("1")){
                 System.out.println("=================P2==============");
-                client.sendString("hello i am process p2 at "+ client.getPort(),"127.0.0.1",4445);
+                client.send("hello i am process p2 at "+ client.getPort(),"127.0.0.1",4445);
                 client.receive();}
 
             if(args[1].equals("2")){
+
                 int i=1;
-                while(true){
-                client.sendInt(i,"127.0.0.1",4445);
+                while(i<100){
+                    System.out.println("sending "+i);
+                    client.send(Integer.toString(i),"127.0.0.1",4445);
                     i++;
                 }
             }
@@ -36,16 +38,20 @@ public class App {
 
             Client client=new Client(4445);
 
+            int i =0;
             if(args[1].equals("1")){
                 // a thread to wait asyn for a message
                 client.receive();
-                client.sendString("hello i am process p1 at "+client.getPort() ,"127.0.0.1",4446);
+                client.send("hello i am process p1 at "+client.getPort() ,"127.0.0.1",4446);
                 //            System.out.println("waiting for 9 seconds");
                 ///           TimeUnit.SECONDS.sleep(9);
             }
 
             if(args[1].equals("2")){
-
+                while(true ){
+                    i=Integer.parseInt(client.receive());
+                    System.out.println("the results is :"+i*i);
+                }
             }
         }
     }

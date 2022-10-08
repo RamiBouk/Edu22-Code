@@ -1,4 +1,5 @@
 package tp12;
+import java.util.Arrays;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -15,6 +16,7 @@ public class Client {
     private InetAddress destAddress;
     private  int port;
     private byte[] buf;
+    int counter=0;
     public int getPort() {
         return port;
     }
@@ -22,57 +24,66 @@ public class Client {
         this.port=port;
         socket=new DatagramSocket(port);
     }
-    public void receive() throws Exception  {
+    public String receive() throws Exception  {
         buf= new byte[512];
+        String content="error";
         DatagramPacket packet =new DatagramPacket(buf,buf.length);
         //Thread thread = new Thread(()  -> {
             try {
                 while(running){
                 System.out.println("waiting for message");
                 socket.receive(packet);
-                String content= new String(buf,0,packet.getLength());
-                System.out.println("received: ["+content+"] from "+packet.getAddress()+":"+packet.getPort());
+                content= new String(buf,0,packet.getLength());
+                System.out.println(counter+"received: ["+content+"] from "+packet.getAddress()+":"+packet.getPort());
                 running=false;
+                counter++;
                 }
             } catch(Exception e){
                 e.printStackTrace();
             }
         //});
        // thread.start();
-
+       running=true;
+       return content;
     }
     
     public int receiveInt() throws Exception  {
         buf= new byte[512];
+        byte[] buf2=new byte[512];
         DatagramPacket packet =new DatagramPacket(buf,buf.length);
         //Thread thread = new Thread(()  -> {
             try {
                 while(running){
                 System.out.println("waiting for message");
                 socket.receive(packet);
-                String content= new String(buf,0,packet.getLength());
-                System.out.println("received: ["+content+"] from "+packet.getAddress()+":"+packet.getPort());
+               int content= new BigInteger(buf2).intValue();
+                System.out.println(counter+"received: ["+content+"] from "+packet.getAddress()+":"+packet.getPort());
                 running=false;
+                if(Arrays.equals(buf,buf2))
+                    System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaa");
+                counter++;
                 }
             } catch(Exception e){
                 e.printStackTrace();
             }
         //});
        // thread.start();
-       return 0;
+       running=true;
+       return 89;
 
     }
 
-    public void sendInt(int message, String ip,int port) throws IOException  {
+    public void send(int message, String ip,int port) throws IOException  {
         byte[] buf=BigInteger.valueOf(message).toByteArray(); 
         InetAddress adress=InetAddress.getByName(ip);
         DatagramPacket packet =new DatagramPacket(buf,buf.length,adress,port);
         System.out.println("sending message");
         socket.send(packet);
-        System.out.println("sent: ["+message+"]");
+        System.out.println("sent: lkajdl; ["+new BigInteger(buf).intValue()+"]");
+        System.out.println((buf));
 
     }
-    public void sendString(String message, String ip,int port) throws IOException  {
+    public void send(String message, String ip,int port) throws IOException  {
         byte[] buf=message.getBytes(); 
 
         InetAddress adress=InetAddress.getByName(ip);
