@@ -23,9 +23,9 @@ public class App {
             if(args[1].equals("2")){
 
                 int i=1;
-                while(i<100){
+                while(true){
                     System.out.println("sending "+i);
-                    client.send(Integer.toString(i),"127.0.0.1",4445);
+                    client.send(String.valueOf(i),"127.0.0.1",4445);
                     i++;
                 }
             }
@@ -49,7 +49,7 @@ public class App {
 
             if(args[1].equals("2")){
                 while(true ){
-                    i=Integer.parseInt(client.receive());
+                    i=Integer.valueOf(client.receive());
                     System.out.println("the results is :"+i*i);
                 }
             }
