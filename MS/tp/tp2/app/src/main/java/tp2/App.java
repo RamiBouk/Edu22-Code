@@ -3,20 +3,21 @@
  */
 package tp2;
 
+import java.util.Scanner;
+
 public class App {
-    public static float multi1D(float[] A,float[]B){
-        float sum =0;
+    public static double multi1D(double[] A,double[]B){
+       double sum =0;
         for(int i =0;i<=B.length-1;i++){
             sum+=A[i]*B[i];
-            System.out.println("sum is "+sum);
         }
         return sum ;
     }
-    public static float[][] multi(float[][] A, float[][] B){
-        float [][] sol=new float[A.length][B[0].length];
-        float sum;
+    public static double[][] multi(double[][] A, double[][] B){
+        double [][] sol=new double[A.length][B[0].length];
+        double sum;
         int b =B.length;
-        float [] Bc=new float[b];
+        double [] Bc=new double[b];
         for(int i =0;i<A.length;i++){
             for (int j = 0; j < B[i].length; j++) {
                 sum=0;
@@ -25,16 +26,48 @@ public class App {
                 }
                 
                     sol[i][j] =multi1D(A[i], Bc);
-                    System.out.println(sol[i][j]);
             }}
 
         return sol;
-
+    }
+    public static double[][] pow(double[][] A, int n){
+        double[][] res=A;
+        for (int i = 1; i < n; i++) {
+            res=multi(A, res); 
+        }
+        return res;
+    }
+    public static void show(double[][] A){
+        for (int i = 0; i < A.length; i++) {
+          for (int j = 0; j < A[0].length; j++) {
+              System.out.print(A[i][j]+" "); 
+          } 
+          System.out.println("|");
+        }
+    System.out.println();
     }
     public static void main(String[] args) {
-        float [][] a ={{1,2},{1,1}};
-        float [][] b ={{1},{2}};
-        System.out.println(a.length);
-        System.out.println(multi(a, b));
+        double [][] a ={{0.8,0.2},{0.1,0.9}};
+        double [][] b ={{0,0}};
+        int n=0;
+        Scanner keyboard =new Scanner(System.in);
+        while(b[0][0]+b[0][1]!=1){
+        System.out.println("donner X[0]:");
+        b[0][0]=Double.valueOf(keyboard.nextLine());
+        System.out.println("donner X[1]:");
+        b[0][1]=Double.valueOf(keyboard.nextLine());
+        if(b[0][0]+b[0][1]!=1)
+            System.out.println("invalide matrix");
+        }
+        System.out.println("X0=");
+       show(b);
+       System.out.println("P=");
+       show(a);
+       System.out.println("donner n:"); 
+    n=Integer.valueOf(keyboard.nextLine());
+    show(multi(b,pow(a,n)));
+        //show(a);
+       // show(pow(a,1));
+        //show(pow(a,2));
     }
 }
