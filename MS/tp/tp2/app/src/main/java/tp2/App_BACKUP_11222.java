@@ -7,7 +7,11 @@ import java.util.Scanner;
 
 public class App {
     public static double multi1D(double[] A,double[]B){
+<<<<<<< HEAD
+       double sum =0;
+=======
         double sum =0;
+>>>>>>> 6d7f5da10c9d50d0e8e488a267025386f53d8adb
         for(int i =0;i<=B.length-1;i++){
             sum+=A[i]*B[i];
         }
@@ -52,6 +56,7 @@ public class App {
         return A;
     }
     public static void main(String[] args) {
+<<<<<<< HEAD
         double [][] a ={{0.8,0.2},{0.1,0.9}};
         double [][] b ={{0,0}};
         int n=0;
@@ -74,5 +79,20 @@ public class App {
         //show(a);
        // show(pow(a,1));
         //show(pow(a,2));
+=======
+        double [][] a ={{1,2},{1,1}};
+        double [][] b ={{0.2,0.5}};
+
+        // calculating
+        double [][] sol=multi(b,a);
+
+        // printing 
+        for (int i = 0; i < sol.length; i++) {
+          for (int j = 0; j < sol[0].length; j++) 
+              System.out.print(sol[i][j]+" | "); 
+          System.out.println();
+        }
+
+>>>>>>> 6d7f5da10c9d50d0e8e488a267025386f53d8adb
     }
 }
