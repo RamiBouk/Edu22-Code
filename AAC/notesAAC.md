@@ -1,6 +1,6 @@
 # Chapitre1: 
 ### Def:
-un laog est suitre fini d'operatoins elementaire constituant un schema
+un algo est suitre fini d'operatoins elementaire constituant un schema
 de calcul ou de resolution d'une problem
 ### Correct & Complet
 
@@ -83,7 +83,47 @@ $T(n)=q*(T(condition)+T(l))$
 $$
 O(f)+O(g)=O(f+g).\\
 O(f)\times O(g)=O(f\times g).\\
-si: f=O(f),\ alors\ Of(f+g)=O(g).\\
+si: f=O(f),\ alors\ O(f+g)=O(g).\\
 si:  \lambda \in \R_+,\ O(\lambda f)=O(f).
 $$
+
+### La notation $\Theta$
+$$
+T(n)=\Theta(f(n))\ si\  \exist c_1,c_2,n_0 / \\
+\forall n>n_0: c_1\times f(n)\le T(n)\le c_2\times f(n)
+$$
+
+### Quelgues regles de la notation $O$
+- $O(c)=O(1)$
+- $O(cT)=cO(T)=O(T)$
+- $O(T1+T2)=O(max(T1,T2))$
+- $O(T1)\times O(T2)=O(T1\times T2)$
+### les principales classes de complexite
+$O(1)<O(N)<O(log(n))<O(n\ log(n))<O(n^2)<O(n^p)<O(a^n)$
+
+# Chapiter 2: Paradigme diviser pour regner
+## Principe general
+- analyse descendante
+
+1. deviser le problem de taile n en sous-problemes plus petits
+2. la solution de chaque sous-probleme facilite la
+construction du probleme entier
+
+## Schema general
+```
+DPR(x):
+	Si x est suffisamment petit ou simple:
+		return A(x)
+	else
+		Decomposer x en sous  exemplaires x1,x2,..xk
+		pour i=1,k: yi=DPR(xi) finpour
+		return les yi pour obtenir une solution a x
+		retourner y;
+	FinSi
+```
+
+
+
+
+
 
