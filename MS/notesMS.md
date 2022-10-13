@@ -53,4 +53,16 @@ aide a:
 ### Concurrentiel
 - les termes depndent de l'interrelation entre ses propres agissement 
 et ceux  d'autres decideurs
+## Recurrence et transience
+### transient
+ i est transient si il exist un chemin pour ne jamais reviem
+### recurrent
+ i est recurrent si il n'est pas transient
+### la periodicite 
+le pgcd entre les nombre des pas dans les cycles entre i est i
+defini par d(i).
+
+si d(i)=1 alors i est aperiodique
+
+si les etat i et j commniquent alos ils ont la meme periode
 
