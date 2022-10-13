@@ -98,10 +98,13 @@ $$
 - $O(cT)=cO(T)=O(T)$
 - $O(T1+T2)=O(max(T1,T2))$
 - $O(T1)\times O(T2)=O(T1\times T2)$
-### les principales classes de complexite
-$O(1)<O(N)<O(log(n))<O(n\ log(n))<O(n^2)<O(n^p)<O(a^n)$
 
-# Chapiter 2: Paradigme diviser pour regner
+### les principales classes de complexite
+$
+O(1)\le O(n)\le O(log(n))\le O(n\ log(n))\le O(n^2)\le O(n^p)\le O(a^n) 
+$
+
+# Chapiter 2 Paradigme diviser pour regner
 ## Principe general
 - analyse descendante
 
@@ -109,7 +112,7 @@ $O(1)<O(N)<O(log(n))<O(n\ log(n))<O(n^2)<O(n^p)<O(a^n)$
 2. la solution de chaque sous-probleme facilite la
 construction du probleme entier
 
-## Schema general
+## Schema generalm
 ```
 DPR(x):
 	Si x est suffisamment petit ou simple:
@@ -121,8 +124,31 @@ DPR(x):
 		retourner y;
 	FinSi
 ```
+## la relation de recurrrence
 
-
+$$
+ T(c)=O(1) \\
+ T(n)=aT(n/b)+O(f(n))\\
+T(n)=D(n)+C(n)\\
+$$
+## la maitre theorem special 
+if
+$$
+T(n)=aT(n/b)+\Theta (n^d)
+$$
+there is :
+$$ 
+if\ d \ge log_b(a)=> T(n)=\Theta (n^d)\\
+if\ d \le log_ba=>T(n)=\Theta(n^{log_ba})\\
+if\ d = log_ba=>T(n)= \Theta(n^d log\ n)\\
+$$
+there's also general master theorm take notes on it but it won't be user
+### Applications:
+- binary seach
+- find maximum
+- quick sort
+- rani
+### need more notes here
 
 
 
