@@ -25,6 +25,9 @@ public class Client {
         this.port=port;
         socket=new DatagramSocket(port);
     }
+    public Client(String ip, int port){
+
+    }
     // 
     // receiving a string 
     //

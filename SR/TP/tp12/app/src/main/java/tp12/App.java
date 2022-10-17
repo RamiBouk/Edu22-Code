@@ -29,6 +29,16 @@ public class App {
                     i++;
                 }
             }
+
+            if(args[1].equals("3")){
+
+                int i=1;
+                while(true){
+                    System.out.println("sending "+i);
+                    client.send(String.valueOf(i),"192.168.117.49",4445);
+                    i++;
+                }
+            }
         }
         //
         //for exectuing p1
@@ -39,6 +49,7 @@ public class App {
             Client client=new Client(4445);
 
             int i =0;
+            
             if(args[1].equals("1")){
                 // a thread to wait asyn for a message
                 client.receive();
@@ -48,6 +59,12 @@ public class App {
             }
 
             if(args[1].equals("2")){
+                while(true ){
+                    i=Integer.valueOf(client.receive());
+                    System.out.println("the results is :"+i*i);
+                }
+            }
+            if(args[1].equals("3")){
                 while(true ){
                     i=Integer.valueOf(client.receive());
                     System.out.println("the results is :"+i*i);
