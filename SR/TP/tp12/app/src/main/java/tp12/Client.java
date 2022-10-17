@@ -27,6 +27,8 @@ public class Client {
     }
     public Client(String ip, int port){
 
+
+
     }
     // 
     // receiving a string 
@@ -38,6 +40,7 @@ public class Client {
         //Thread thread = new Thread(()  -> {
         System.out.println("waiting for message");
         socket.receive(packet);
+
         content= new String(buf,0,packet.getLength());
         System.out.println("received: ["+content+"] from "+packet.getAddress()+":"+packet.getPort());
         running=false;

@@ -5,9 +5,11 @@ package tp12;
 
 import java.io.IOException;
 
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner keyboard= new Scanner(System.in);
         //
         //for executing p2
         //
@@ -64,12 +66,22 @@ public class App {
                     System.out.println("the results is :"+i*i);
                 }
             }
-            if(args[1].equals("3")){
+            if(args[1].equals("5")){
                 while(true ){
                     i=Integer.valueOf(client.receive());
                     System.out.println("the results is :"+i*i);
                 }
             }
+                
+            if(args[1].equals("3"))
+                while(true ){
+                    
+                    client.receive(); 
+                    String message=keyboard.nextLine();
+                    client.send(message,"192.168.117.163",4447);
+                }
+                
+            }
         }
     }
-}
+
