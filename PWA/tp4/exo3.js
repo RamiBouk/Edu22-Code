@@ -1,5 +1,4 @@
-function  uniqueIdFunc(){let i=1;return ()=>i++}
-uniqueId=uniqueIdFunc()
+const uniqueId=(()=>{let i=1;return ()=>i++})()
 console.log(uniqueId())
 console.log(uniqueId())
 console.log(uniqueId())

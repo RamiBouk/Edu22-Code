@@ -3,7 +3,7 @@ let pete = { name: "Pete", surname: "Hunt", id: 2 };
 let mary = { name: "Mary", surname: "Key", id: 3 };
 let users = [ john, pete, mary ];
 
-let usersMapped = users.map((user)=>({fullname:user.name+" "+user.surname,id:user.id}))
+let usersMapped = users.map(user=>({fullname:`${user.surname} ${user.surname}`,id:user.id}))
 
 console.log(users)
 console.log(usersMapped)
