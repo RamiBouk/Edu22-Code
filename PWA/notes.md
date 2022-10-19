@@ -78,4 +78,36 @@ scores.filter((i)=>i>5);
  ```
  make a unique id generator as an exercise.
 
+# document object model DOM
+it's an interface of the html page for example (APi). it allows to
+access access to the html code.
 
+The web page is translated to a tree.
+
+the mos timportant object on dom si node
+## Accessing the DOM
+1. get element using an id
+
+```
+const p = document.getElementById('elementId');
+```
+2. using the html element tag.
+```
+const p1=document.getElementByTagName();
+//this returns an HTML collection
+```
+2. the querySelector(CSS)
+```
+var e =doument.querySeletor('*') //all element of all types
+var e =doument.querySeletor('h1') //first h1 element
+var e =doument.querySeletor('div>p') // first child of div of type p
+var e =document.queryselecor('.myclass') // select his class
+var e =document.queryselecor('[href]') // select node with the attr href 
+var e =document.querySelectorAll('') // 
+```
+## Navigation between DOM Nodes
+
+you cuaes use `` first[Element]Child ``  or ``second[Element]Child``
+or ``childNodes``
+
+chekc more attributes for node in course`
