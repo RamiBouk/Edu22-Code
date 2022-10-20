@@ -149,7 +149,8 @@ there's also general master theorm take notes on it but it won't be user
 - quick sort
 - rani
 ### need more notes here
+#  Chapitre3: Programmation dynamique
 
-
-
+<b style="color:red">Recursivity wihtout reptition and it's a bottom up
+approach instead of top down approach</b>
 
