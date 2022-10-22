@@ -107,7 +107,38 @@ var e =document.querySelectorAll('') //
 ```
 ## Navigation between DOM Nodes
 
-you cuaes use `` first[Element]Child ``  or ``second[Element]Child``
-or ``childNodes``
+You causes use `` first[Element]Child ``  or ``second[Element]Child`` or
+or ``childNodes``...
 
-chekc more attributes for node in course`
+Check more attributes for node in course
+
+## types of DOM Nodes
+the tree consist of different types of nodes.
+
+every node has ``nodeType``
+
+_write the table here_
+
+## Changing HTML content
+the easiest way is use the innerHTML property
+```
+element.innerHTML="new text"
+```
+## Creer et inserer des elements (important)
+
+1. create element
+```
+var element =document.createElement('div')
+```
+2. effect attributs to it 
+```
+element.id="myId";
+//or
+element.setAttribute('id',`myId');
+```
+3. add the node to the document
+```
+var p=document.querySelector('.id');
+p.appendChild(element);
+```
+

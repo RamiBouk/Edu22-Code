@@ -1,10 +1,10 @@
 <html>
 	<body>
 		<div id='title'>
-			hel
+			title
 		</div>
 		<div class='myClass'>
-			<p>
+			<p >
 				klejlkjl
 			</p>
 			hehe
@@ -12,8 +12,16 @@
 	</body>
 
 	<script charset="utf-8">
-		const p= document.querySelector('.myClass');
+		const p= document.querySelector('#title');
 		p.style.color='red'
-		console.log(p.firstChild.nodeName)
+
+		console.log('the type of the node:')
+		console.log(p)
+		p.innerHTML="new text"
+		var a =document.createElement('a');
+		a.setAttribute('href','http://google.com')
+		a.innerHTML='link'
+		p.appendChild(a)
+
 	</script>
 </html>
