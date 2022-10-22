@@ -75,7 +75,8 @@ $(X_n)$ es une hcaine de markov homogene si:
 
 1. Propety de Markov:
 $$
-Pr(X_{n+1}=x_{n+1}|X_1=x_1,..,X_i=x_i,.,X_n=x_n)=Pr(X_{n+1}=x_{n+1}|X_n=x_n)
+Pr(X_{n+1}=x_{n+1}|X_1=x_1,..,X_i=x_i,.,X_n=x_n)=
+Pr(X_{n+1}=x_{n+1}|X_n=x_n)
 $$
 2. Homogeneite: 
 $$
