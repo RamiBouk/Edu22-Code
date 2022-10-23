@@ -71,16 +71,16 @@ with the next state only depeneding on the current state
 - $s,t$: are a time value, $i,j$ are states
 - $p$ est la probabilites de transition
 ## Homogeneite
-$(X_n)$ es une hcaine de markov homogene si:
+$(X_n)$ es une chaine de markov homogene si:
 
 1. Propety de Markov:
 $$
-Pr(X_{n+1}=x_{n+1}|X_1=x_1,..,X_i=x_i,.,X_n=x_n)=
-Pr(X_{n+1}=x_{n+1}|X_n=x_n)
+P\{X_{n+1}=x_{n+1}|X_1=x_1,..,X_i=x_i,.,X_n=x_n\}=
+P\{X_{n+1}=x_{n+1}|X_n=x_n\}
 $$
 2. Homogeneite: 
 $$
-\forall n_1,n_2:Pr(X_{n_1+1}=y|X_{n_1}=x)=Pr(X_{n_2+1}=y|X_{n_2}=x)
+\forall n_1,n_2:P\{X_{n_1+1}=y|X_{n_1}=x\}=P\{X_{n_2+1}=y|X_{n_2}=x\}
 $$
 ## Recurrence et transience
 ### transient
