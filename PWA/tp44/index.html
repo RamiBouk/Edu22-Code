@@ -1,0 +1,72 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<ul ></ul>
+	</body>
+	<script charset="utf-8">
+		const fruitList=['apple','banana','tomato']
+
+
+		// getting the element
+
+		let list = document.getElementsByTagName('ul')[0]
+		list=document.querySelector('ul')
+
+
+		// creating avocado	
+
+		let avocadoLine=document.createElement('li')
+		avocadoLine.innerHTML='avocado'
+
+
+		// creating li for each element in list
+
+	fruitList.forEach((fruit )=>{
+		let line=document.createElement('li')
+		line.innerHTML=fruit
+		list.appendChild(line)
+			})
+
+
+		// adding the avocadoLine
+
+		list.insertBefore(avocadoLine,list.lastChild)
+
+
+		//adding attribute
+
+		list.childNodes[0].setAttribute('color','red')
+		
+		
+		// adding random price for each element
+
+		list.childNodes.forEach((liElement)=>{
+		liElement.createAttric
+		liElement.setAttribute('price',`${Math.floor(100+300*Math.random())}`)	
+		})
+		
+
+		//display the price of each element
+
+		list.childNodes.forEach((liElement)=>{
+		liElement.innerHTML+=` price:${liElement.getAttribute('price')}`
+		})
+
+
+		// changing font and color of first element
+
+		list.firstElementChild.style.color='green'
+		list.firstElementChild.style.fontSize='20px'
+		
+
+		// addin the title of list
+// innerHRML and textcontent is not the same one reads the htnl inside one deoes not
+		let title=document.createElement('p')
+		let body=document.body
+		body.insertBefore(title,body.firstChild)
+		document.getElementsByTagName("p")[0].innerHTML='List of <b>fruit</b>'
+		
+
+	</script>
+</html>
