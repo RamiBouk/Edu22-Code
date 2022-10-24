@@ -76,3 +76,16 @@ traiter stocker communiquerdes information dans l'organisation.
 - il y a interaction enre l'objectif d'une part et les moyens/delais
 		d'autre part.
 
+
+
+
+
+
+
+
+
+
+# chapitre d'incpection
+chercher les choses mall faites pour amelierer
+apres un inspection en deliver un delivrable
+some bugs hide other bugs

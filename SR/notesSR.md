@@ -167,8 +167,20 @@ ${\large e} xy$ avec:
   - e est l'emission d'un message, e'est la reception de ce message
   - il exist: $e \to f \land f \to e'$
 - Evenements concurrents:
-$$
+$$14444444444444
 e \mid\mid e'
 \iff
 \overline{e\to e'} \land \overline{e'\to e}
 $$
+# chapitre 3
+## Horloge de Lamport
+## Horloge de Mattern
+each process sends it's view on the other processes clocks as well with
+ech message
+## Horloge Matercialle
+##Prtocole Birman-Shiper-Stephenson
+it's a combination of matern and matricial
+- les Ps se tamettent les messages par diffusion
+- L'implementaiton du protocole est onde dur les regles siuants:
+  - Regles 1: avan diffusion vi[i]:=vi[i]+1 et vm=vi[i]
+  - Regles 2: 
