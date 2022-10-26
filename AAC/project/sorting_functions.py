@@ -5,9 +5,10 @@ import sys
 ## Functions:
 def bubble_sort(array):
     sorted=False
+    array_size=len(array)
     while(not sorted):
         sorted=True
-        for i in range(1,ARRAY_SIZE):
+        for i in range(1,array_size):
             if(array[i-1]>array[i]):
                 array[i],array[i-1]=array[i-1],array[i]
                 sorted=False
