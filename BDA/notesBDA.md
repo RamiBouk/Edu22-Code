@@ -160,20 +160,84 @@ definition
 ## cops u trigger
 ## nos de correlation
 ## resrictions
+## transatction:
+un unite d mises a jours.compose d'operation qui doivent toutse etre
+exeutees ou poas du tout.
 
+--valide:commit
+-annuler(abort,rollback)
+### properieted aid:
+- automicite
+- coherence 
+- isolation 
+- durabilite
+## atomicite:
+une transaction etatn une unite d'operations dur une base de donnees
+l'anulation d'une transaction doit conduire a lannulation de tous ses
+efts sur la ase de donnes
+le sqbd doir conserver l'nistoryique des modifications non encore
+validees pourpouvoir les restaure les donnnes origincales au cas ou la
+transcation s auant effectuue ces modifications a ete annuee
 
+## coherence 
+une transaction doit faire passer une base de donnes d'un ett coheren a
+un autre etat coherent 
+un etat coherent est un etat out toutes les contrantes d'inegrite sont
+respetees
 
+ oracle propose de verifier chaque contrainte d'inefrite:
+ - aud moment de la modification des donnees(par defaut)
+ -  Aumoment de la validation de la transaction (clauses DEFFERABLE
+		 INTIALLY DEPFERRED)
+	
+## concurrence des acces 
+i plusierus transaction s'executen en parallele certian ..
+## incoherence 
+plusierus transactions modifiant des donnees liees parte une contrainte
+d'interite peut introduire dees incoherences 
+## perte de mises a jour
+unne perte de mise a jour peut arriver lorsqu'une transaction calcule
+une mise a jour a partir d'une donnee permee
 
+## lecture non reproducitibles 
+deu lexxture d'une meme donnee dans la meme transaction peuvent conduire
+a deux valeur differentes si elle a ete modifie pa une autre
+transaction.
 
+## controle de concurrence 
+les problemes lies a la concurrence des acces sont des aux acces
+concurrents aux donnees en lecture et en ecriture des differentes
+transaction 
 
+lorsque les transactions sont executees de maniere serielle les
+provlemes de concurrence vus precedemenet ne se posent pas 
 
+## lecture non prepodcutiles 
+deux lecture d'une meme donnee dans la meem transaction peuvent conduire
+a deux valeurss fdifferentes si elle a ete modifiee par une autre
+tansaction
+## execution serialisable 
+ne permettre l'execution que d
+une seule transaction a la fois empeche lexpoitation optimale des
+ressources disponibles (capacie de calcul ,parraleilism..). 
+cela aumente condiderablement le temps de repone de la base de donnnees 
+la solution consiste a executer en parallele les transactions dont le
+affaires . 
 
+## operations permutables 
+chauqe transaction deux types d'oerations: 0 lecture R: lecture d'un
+objet de la base dedonnnes lire le salaire de l'impolyqe 
+- ecriture(2)
 
+Deux operations dont ditees permutable si  leur effet est identique
+quelque soit l'ordre dans lequel elles sont executees:
+- les operations sur de objets distincts sot permutables
+- - les operation de lecture dur le meme objet dont permutable 
+- les operationd d'ecriture dur le meme objet ne sont par permutables
+	
+## execution seialisable 
 
-
-
-
-
-
-
+un scenario d'exection serialisable est une
+executin pouvant etre ramenee a une exjcution seielle equivalente par un
+ensemble de permutations d'operations permutables.`
 
