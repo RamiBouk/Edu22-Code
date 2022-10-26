@@ -53,14 +53,18 @@ def insertion_sort(array):
             array[j-1],array[j]=array[j],array[j-1]
             j-=1
     return array
+def heapify(array):
+    for i in range(1,tree_depth):
+        m=2**(i-1)
+        left_tree.append(tree[i][:m])
+        right_tree.append(tree[i][m:])
+
 
 def heap_sort(array):
+    create_tree_from_list(array)
     ## create heap 
-    depth=floor(log2(len(array)))+1
-    for i in range(depth):
-        c=(2**(i))-1
-        c2=(2**(i+1))-1
-        print(array[c:c2])
+    heapify(create_tree_from_list(array))
+    ## solving
     return array
 
 def selection_sort(array):
