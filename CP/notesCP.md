@@ -5,7 +5,7 @@ conduite de projet: gestion de projets infromatiques
 - faire par le maitre d'oeuvre
 - reponde aux attents de maitre d'ouvrage
 - dans les contraintes de delai,cout et qualite
-## 1.2 Definitiond d'un projet
+## 1.2 Definition d'un projet
 - un projet est defini comme un ensembled'activites a effectuer pour
 atteindre un but defini
 - represent sous forme d'un triangle(moyens, objectif, delai)
@@ -37,7 +37,7 @@ Une activite pour realise un objective smart
 ### 1.2.4 Definition:
 Ensemble d'activite organisees en phases ou etapes et formant l'unite de
 gestion permettat la realistaion d'un objective defini et precis.
-## Gestion d'un projet
+## 1.3 Gestion d'un projet
 - pour but mener un projet a ont termen en oranisant et surveillant son
 		deroulement.
 
@@ -57,10 +57,10 @@ Ameliorer la qualite, deminuer les couts et maitriser les delais
 	- Suivre l'avancement du projet, orientaiton et les decisions.
 	- INclure la gestion de l'equipe et la gestion des conflits.
 
-### 1.3.2 la boucle de retocation:
-Analyser=>Ograniser=> Produire=>Pilotes
+### 1.3.2 la boucle de relocation:
+Analyser$\to$Ograniser$\to$Produire$\to$Pilotes
 
-### 1.3.3 Definition normaliser de la gestion e projet
+### 1.3.3 Definition normaliser de la gestion de projet
 La gestion de projet consiste à planifier, organiser, 
 suivre et maitriser tous les aspects du
 projet ainsi que la motivation de tous ceux qui sont impliqués dans
@@ -79,7 +79,29 @@ traiter stocker communiquerdes information dans l'organisation.
 
 
 
+# Decoupage d'un projet et les modele de developpement
+## 2.1 introduction
+un processus logiciel est un ensemble d'activited qui conduit a la
+realisation du produit logiciel.
+## les ricipe de decoupage:
+- la tache de chef de projet 
 
+Id les sous enseble:
+- chaque sous enselbe donne lieu a une resultat biend identifie
+- la carge propere a chacun peut etre evaluee
+- les contrainted d'echainement entre sous-ensemble
+- les sous-enseble peut etre decoumpuse plus
+
+## 2.3 Criteres de decoupages:
+on utilise deux grands criteres pour decouper un projet:
+1. Temporal
+2. Structurel
+
+### temporal:
+Utilise dans la plupart de projet 
+- un projet se compose de _phase_
+- une activite est definie par une  ou plusierus _taches_
+- chaque taches a de _livrable_
 
 
 
