@@ -95,3 +95,25 @@ si d(i)=1 alors i est aperiodique
 
 si les etat i et j commniquent alos ils ont la meme periode
 
+# le loi de poison
+## definition
+le processus depoisoon set a modeleiser l'occurrene d'evenemts
+successive
+
+le variable discret $X$ siut une loi de posson de parametre $\lambda$ si
+$$
+\forall k \in N, P[X=k]=e^{-\lambda}\times \frac{\lambda^k}{k!}
+$$
+- $p[x=k]$: la probablite d'avoir k A fois
+- $\lambda$ la moiyen a'accurrence k
+-
+### dfintin le loi d'expo
+## Les files d'attente Markoviennes 
+
+- dans unchaine de markov le temps est discret 
+- on analyse un situationdans le system est analyser de facon continue
+- $X_t$: l'etat du systeme en $t$
+- les  points sont aleatoires dans le temps
+
+## processus de naissance et de mort 
+- 
