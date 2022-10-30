@@ -33,14 +33,21 @@ def merge_sort(array):
 def quick_sort(array):
     if(len(array)==1):
         return array
+
     poped=array.pop()
     sorted_array=quick_sort(array)
     length=len(sorted_array)
-    for i in range(length):## this is bad the loop can be replaced with something better with O(len(n))
-        if(poped<array[i]):
-            sorted_array.insert(i,poped)
-            return sorted_array
-    sorted_array.append(poped)
+    if(poped>=sorted_array[length-1]):
+        sorted_array.append( poped)
+        return sorted_array
+    high,low=length-1,0
+    while(low<high):
+        mid=(high+low)//2
+        if(poped<=sorted_array[mid]):
+            high=mid
+        else:
+            low=mid+1
+    sorted_array.insert(low,poped)
     return sorted_array
 
 def insertion_sort(array):
@@ -98,7 +105,10 @@ ARRAY_SIZE=100_00
 
 def main():
     sys.setrecursionlimit(50000)
-    array=[i for i in range(ARRAY_SIZE,0,-1)]
-    new_array=heap_sort(array.copy())
+    while(True):
+        array=[floor(10*random()) for i in range(10)]
+        new_array=quick_sort(array.copy())
+        array.sort()
+        print(new_array==array)
 if __name__ == "__main__":
     main()
