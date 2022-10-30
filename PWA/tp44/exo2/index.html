@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Index</title>
+	</head>
+	<body>
+		</body>
+	<script charset="utf-8">
+		var books=[
+		{
+		title:"You don\'t know js",
+		author:'Kyle Simpson',
+		alreadRead: false,
+		},
+		{
+		title:"eloquent JavaScript",
+		author:'Marinn Haverbeke',
+		alreadRead: true,
+		}
+		]
+		const body=document.querySelector('body')
+
+		// Creating the title	
+		var title=document.createElement('h1')
+		title.innerHTML="My Book LIst"
+		body.appendChild(title)
+		
+		//  Creating a list
+		var list=document.createElement('ul')
+		books.forEach((book)=>{
+		let line=document.createElement('li')
+		line.innerHTML=`Title: <b>${book.title}</b>\n Author: <b>${book.author}"</b>`
+		list.appendChild(line)
+		})
+		body.appendChild(list)
+
+		// changing the style depending on the reading
+
+
+		
+
+
+	</script>
+</html>

@@ -7,12 +7,34 @@ import java.io.IOException;
 
 import java.util.Scanner;
 
+
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner keyboard= new Scanner(System.in);
+        if(args[0].equals("tp2")){ 
+            if(args[1].equals("p1")){
+                Client client=new Client(20001);
+                String content;
+                for(int i=0;i<10;i++){
+                    client.send(String.valueOf(i),"127.0.0.1",20002);
+                    content=client.receive();
+                    
+                }
+            }
+            else if(args[1].equals("p2")){
+                Client client=new Client(20002);
+                String content;
+                for(int i=0;i<10;i++){
+                    client.send(String.valueOf(i),"127.0.0.1",20001);
+                    content=client.receive();
+                }
+            }
+
+        }
         //
         //for executing p2
         //
+
         if(args[0].equals("p2")){
             System.out.println("=================P2==============");
             Client client=new Client(4446);
