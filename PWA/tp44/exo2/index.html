@@ -9,30 +9,38 @@
 		</body>
 	<script charset="utf-8">
 		var books=[
-		{
-		title:"You don\'t know js",
+		{ title:"You don\'t know js",
 		author:'Kyle Simpson',
-		alreadRead: false,
+		alreadyRead: false,
 		},
 		{
 		title:"eloquent JavaScript",
 		author:'Marinn Haverbeke',
-		alreadRead: true,
+		alreadyRead: true,
 		}
 		]
 		const body=document.querySelector('body')
 
 		// Creating the title	
 		var title=document.createElement('h1')
-		title.innerHTML="My Book LIst"
+		title.innerHTML="My Book List"
 		body.appendChild(title)
 		
 		//  Creating a list
 		var list=document.createElement('ul')
+
 		books.forEach((book)=>{
-		let line=document.createElement('li')
-		line.innerHTML=`Title: <b>${book.title}</b>\n Author: <b>${book.author}"</b>`
-		list.appendChild(line)
+			let line=document.createElement('li')
+
+			// the style of the items
+			line.style=`color:${book.alreadyRead?"green":"red"}`
+
+			// the text in the items
+			line.innerHTML=`Title: <b>${book.title}</b>\n
+			Author: <b>${book.author}</b>`
+
+			// adding to the DOM
+			list.appendChild(line)
 		})
 		body.appendChild(list)
 
