@@ -1,4 +1,5 @@
 conduite de projet: gestion de projets infromatiques
+
 # Chapiitre 01: Problemenatique de la gestion de projet
 ## 1.1 Introduction
 - started in the 50s
@@ -111,3 +112,11 @@ Utilise dans la plupart de projet
 chercher les choses mall faites pour amelierer
 apres un inspection en deliver un delivrable
 some bugs hide other bugs
+
+## Chapitre estimation des couts
+aquire to e
+
+
+LE SIGNE DE hehtl
+	
+

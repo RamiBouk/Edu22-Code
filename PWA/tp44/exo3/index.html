@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Index</title>
 	</head>
 	<body>
+		<div class="output">
+			what is your name
+		</div>
+		<input type="text"  name="userName" />
+		<button>
+			Submit
+		</button>
+		<div id="welcome" class="c1">
+
+		</div>
 	</body>
 
 	<script charset="utf-8">
+
+		// getting the textfield
+		var textField=document.querySelector("input[name=\"userName\"")
+
+		//getting the bttton
+		var button=document.querySelector("button")
+
+		// getting the output area
+		var output=document.getElementById("welcome")
+
+		// handeling the event of clicking 
+		let f=()=>{
+		if(textField.value.length>3)
+		output.innerHTML=`welcome ${textField.value} !`
+		else 
+		output.textContent="error"
+	}	
+		button.addEventListener("click",f)
+
+
 		
 	</script>
+
 </html>
