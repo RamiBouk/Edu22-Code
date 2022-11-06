@@ -73,21 +73,21 @@ with the next state only depeneding on the current state
 ## Homogeneite
 $(X_n)$ es une chaine de markov homogene si:
 
-1. Propety de Markov:
+1. Propety de Markov: ( the past states don't matter)
 $$
 P\{X_{n+1}=x_{n+1}|X_1=x_1,..,X_i=x_i,.,X_n=x_n\}=
 P\{X_{n+1}=x_{n+1}|X_n=x_n\}
 $$
-2. Homogeneite: 
+2. Homogeneite: ( the current time doesn't matter)
 $$
 \forall n_1,n_2:P\{X_{n_1+1}=y|X_{n_1}=x\}=P\{X_{n_2+1}=y|X_{n_2}=x\}
 $$
 ## Recurrence et transience
-### transient
+### Transient
  i est transient si il exist un chemin pour ne jamais reviem
-### recurrent
+### Recurrent
  i est recurrent si il n'est pas transient
-### la periodicite 
+### La periodicite 
 le pgcd entre les nombre des pas dans les cycles entre i est i
 defini par d(i).
 
@@ -95,18 +95,19 @@ si d(i)=1 alors i est aperiodique
 
 si les etat i et j commniquent alos ils ont la meme periode
 
-# le loi de poison
+# le loi de poison(loi natural pour les varaible discret)
 ## definition
 le processus depoisoon set a modeleiser l'occurrene d'evenemts
 successive
 
 le variable discret $X$ siut une loi de posson de parametre $\lambda$ si
+
 $$
-\forall k \in N, P[X=k]=e^{-\lambda}\times \frac{\lambda^k}{k!}
+\forall k \in N, P\{X=k\}=e^{-\lambda}\times \frac{\lambda^k}{k!}
 $$
 - $p[x=k]$: la probablite d'avoir k A fois
-- $\lambda$ la moiyen a'accurrence k
--
+- $\lambda$ expected value of x and also varirance 
+
 ### dfintin le loi d'expo
 ## Les files d'attente Markoviennes 
 
