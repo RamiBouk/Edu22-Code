@@ -16,7 +16,7 @@ public class App {
         Server server = new Server();
         for (int i=0;i<60 ;i++ ) {
             new Thread(()->{
-                Client c=new Client(1,-Math.log(Math.random())/lambda,-Math.log(Math.random())/miu);
+                Client c=new Client(-Math.log(Math.random())/lambda,-Math.log(Math.random())/miu);
                 try {
                     Thread.sleep((int)(c.tempsArrivee*1000));   
                 } catch(Exception e){

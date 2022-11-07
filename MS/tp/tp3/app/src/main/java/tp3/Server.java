@@ -13,7 +13,7 @@ public class Server{
     }
     public void serve(Client client){
         System.out.print("client id:");
-        System.out.println(client.indent);
+        System.out.println(client.id);
         System.out.print("the curent time:  ");
         System.out.println(client.tempsArrivee);
         System.out.print("The service time: ");

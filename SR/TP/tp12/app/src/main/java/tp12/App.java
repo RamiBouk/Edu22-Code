@@ -19,7 +19,7 @@ public class App {
             if(args[1].equals("p1")){
 
                 // PROCESSUS P1
-                DatagramSocket socket=new DatagramSocket(20001);
+                DatagramSocket socket=new DatagramSocket(10001);
                 keyboard.nextLine();
                 byte[] buf= new byte[512];
 
@@ -30,7 +30,7 @@ public class App {
                     String message=String.valueOf(i);
                     buf=message.getBytes(); 
                     InetAddress adress=InetAddress.getByName("127.0.0.1");
-                    DatagramPacket packet =new DatagramPacket(buf,buf.length,adress,20002);
+                    DatagramPacket packet =new DatagramPacket(buf,buf.length,adress,10002);
                     socket.send(packet);
 
                     //receiving
@@ -46,7 +46,7 @@ public class App {
             else if(args[1].equals("p2")){
 
                 // PROCESSUS P1
-                DatagramSocket socket=new DatagramSocket(20002);
+                DatagramSocket socket=new DatagramSocket(10002);
                 keyboard.nextLine();
                 byte[] buf= new byte[512];
 
@@ -57,7 +57,7 @@ public class App {
                     String message=String.valueOf(i);
                     buf=message.getBytes(); 
                     InetAddress adress=InetAddress.getByName("127.0.0.1");
-                    DatagramPacket packet =new DatagramPacket(buf,buf.length,adress,20001);
+                    DatagramPacket packet =new DatagramPacket(buf,buf.length,adress,10001);
                     socket.send(packet);
                     
                     // receivina
@@ -76,12 +76,12 @@ public class App {
             if(args[1].equals("p1")){
 
                 // PROCESSUS P1
-                Client client=new Client(20001);
+                Client client=new Client(10001);
                 String content;
                 int T=5;
                 for(int i=0;i<10;i++){
                     Thread.sleep(T*1000);
-                    client.send(String.valueOf(i),"127.0.0.1",20002);
+                    client.send(String.valueOf(i),"127.0.0.1",10002);
                     content=client.receive();
                     
                 }
@@ -89,11 +89,11 @@ public class App {
             else if(args[1].equals("p2")){
 
                 // PROCESSUS P2
-                Client client=new Client(20002);
+                Client client=new Client(10002);
                 String content;
                 int T=10;
                 for(int i=0;i<10;i++){
-                    client.send(String.valueOf(i),"127.0.0.1",20001);
+                    client.send(String.valueOf(i),"127.0.0.1",10001);
                     content=client.receive();
                 }
             }
