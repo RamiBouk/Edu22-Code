@@ -57,17 +57,18 @@ def main():
     times = {}
     arr_sizes = []
     durations = []
-    algo_name = "insertion"
+    algo_name = "merge"
     study(array_sizes=arr_sizes,
           durations=durations,
-          min_array_size=6000,
+          min_array_size=5000,
+          max_array_size=10000,
           algo_name=algo_name,
           )
     times["array sizes"] = arr_sizes
     times["durations"] = durations
     df = pd.DataFrame(times)
     print(df)
-    df.to_csv(f"{algo_name}.csv", mode="a")
+    df.to_csv(f"data/{algo_name}.csv", mode="a")
     df.plot(kind="scatter", x="array sizes", y="durations")
     plt.show()
 
