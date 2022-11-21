@@ -115,13 +115,75 @@ Repondre a les ordre.
 - basé sur la possibilité de transformer automatiquement des spécifications
 - les specifications sont completement validees
 ### Cascade
-- 
+- chaque etape a une validation
 ### V
+- amelioration de cascade
 ### spirale
-## Les modeles de cycle de vie specifiques (RUP)
+## Les modeles de cycle de vie specifiques (Rational Unified Process)
+- combinaision plusieurs models
+- quatre phase:(opportunite,elaboration,cnstruction,transition)
 ## Conclusion
+- les modeles sont de represtntations abstraite des processus logiciel.
+- le choix est sure analyse de cracter et risque
+- extrem programming exist
 
+# Gestion de projet
+## Activites
+1. Ecrire proposition du projet
+2. planificatino et programmatino du projet
+3. evaluatino des couts du projet
+4. controle et revision du projet
+5. Selectinon et evalation du personnel
+6. Ecriture du rapport et de presentations
 
+## Planification du projet
+- estimation de constraintes effectans le projet
+### Le plan du projet
+section suivants:
+- introduction
+- organisation du projet(description d'equipe)
+- analyse des risque(+probabilite+staratedie pour minimize)
+- besions des ressources en materile et logiciel
+- decoupage du projet (+ livrable+jalons)
+- prgrammation du projet(depenedence+temps+jalons+effectue personel)
+- mecanisem de controle et les rapports
+### Les jalons et les livrables
+1. le logiciel 
+2. un jalon/milesones(need rapport)
+3. un Librable(delivre au client)
+## La programmation du projet
+- estimer le temps est ressource
+- programme est forme diagramme
+- deux techniques complementaires:
+	1. des graphes(methode antecedents,diagramme fleche)
+	2. Technique de Gantt
+### Le graphe des anteedents
+- correspond a la methode du Chemin critique
+- chaque activite  presnetee par une boited
+### Le diagramme fleche
+- activite sont de fleche
+- les nodes repressnetent es jalons
+### Methode du chemin critique
+- l'etude des se graphes defini un chemin critque
+- cheming critique: le chemin que defini la duree totatle de projet
+- on calcule les paraetres cles attaches a chaque graphe:
+	- Dates au plus tot
+	- Dates au plus tard
+	- Marge
+### Les types de liens
+- debut-debut
+- debut fn
+- debut debt
+- fin fin
+
+## Gestion des Risque
+- la probabite un evenemt indesirable a lieu
+- types des risques:
+	- lies au projet 
+	- du produit 
+	- metier ou commerciaux
+## Le processus de estion des risque
+## Conclusion
 
 
 
