@@ -1,4 +1,4 @@
-# Problematique de la gestions de projet
+# 1. Problematique de la gestions de projet
 ## Definiotn d'un projet:
 - \<activite\> uniques pour atteinre un but specifique dnas le triang(objectif, 
 	 moyens, delai) 
@@ -68,7 +68,7 @@ Repondre a les ordre.
 - les pricippaux acteurs sont(matire d'oeuvre/maitre d'ouvrage)
 
 
-# Decoupage d'un projet 
+# 2. Decoupage d'un projet 
 ## Les pricipes de decoupage
 - identifier des sous-ensembles
 	- chaque sous enseble donne resultat
@@ -107,7 +107,7 @@ Repondre a les ordre.
 5. realisation
 6. la mise en oeuvre
 7. la qualification
-# Les modeles de developpemnt
+# 3. Les modeles de developpemnt
 ### Code-and-fix
 - etape breve de comprehension
 - plusierurs cycle de mis au point
@@ -127,7 +127,7 @@ Repondre a les ordre.
 - le choix est sure analyse de cracter et risque
 - extrem programming exist
 
-# Gestion de projet
+# 4. Gestion de projet
 ## Activites
 1. Ecrire proposition du projet
 2. planificatino et programmatino du projet
