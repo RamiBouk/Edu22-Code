@@ -76,9 +76,20 @@ traiter stocker communiquerdes information dans l'organisation.
 ### 1.4.2 Caracteristiques d'un SI
 - il y a interaction enre l'objectif d'une part et les moyens/delais
 		d'autre part.
-
-
-
+### objective:
+1. productivite admin
+2. aide aumangement 
+3. eficacite operationnelle
+4. evolutivite
+5. utilisation d'une nouvelle technoologie
+## 1.5 les acteurs du projet
+### maitrise d'ouvrage ou le maitre  d'ouvrage (MOA)
+- cahier des charges
+- financement et planning generale
+- responsabilite de pilotage generale
+- adapter le perimetre fonctionnel en cas de retard
+### maitrise d'ouvre ou maitre d'oeuvre (MOE)
+- 
 
 # Decoupage d'un projet et les modele de developpement
 ## 2.1 introduction
