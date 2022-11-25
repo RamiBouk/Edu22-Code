@@ -1,4 +1,4 @@
-## function callback
+# function callback
 when you use a function is used as a parameter for another function
 we use callback in jQuery
 ## arrays in js 
@@ -177,12 +177,22 @@ like:
 - `keyCode`: get's the code of the key pressed.
 
 
+## JSON
+1. Ensemble nom, valeur
+2. Can create a table with`[ ]`
 
+- JSON.parse(txt)
+- JSON.stringify(object)
 
-
-
-
-
-
+## Synchronous and asynchronous in JS
+- Concurrency: multiple tasks t the same time but no simultaneously
+- Prallelism: multiple taks simultaneously
+- synchronous programming: tasks one after the other
+- Asynchronous programming: one task can execute while the other one
+	pauses 
+## Asynchronous in JS	
+- from call stack to webapi
+- from webapi to callback queue
+- the event loop checks the call stack if empty check callback queue
 
 
