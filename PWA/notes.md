@@ -1,4 +1,4 @@
-## function callback
+# function callback
 when you use a function is used as a parameter for another function
 we use callback in jQuery
 ## arrays in js 
@@ -141,7 +141,7 @@ element.setAttribute('id',`myId');
 var p=document.querySelector('.id');
 p.appendChild(element);
 ```
-## EVENEMTS
+## EVENTS
 ```
 <input type="button" onclick="console.log('clicked')"/>
 or 
@@ -158,7 +158,7 @@ dom-2 allows that using `.addEentListener(event,handler{,phase})` and
 `.removeEvenListener` which you have to use the same name of the
 fucntion to use but other than that they have the same parameters.
 lm
-- event: string of the event like `click`,`"load"`, `'mousesover"`.
+- event: string of the event like "click", "load", "mousesover".
 - handler: the js function that is executed each time the event happens. 
 - phase: a boolean by default false permet de gerer le sens de
 		propagation de l'evenment. important quend les elements sont
@@ -166,5 +166,33 @@ lm
 
 ### this
 This is used to refernce the element inside the handler of the event
-### l'objet event
+### l\'objet event
+gives information about the event that triggered the function
+like:
+
+- `type`: "focus"/"load"/etc
+- `currentTarget`: the element that has the event listener. 
+- `clientX`, `clientY`: get the x and y position of mouse 
+- `target`: the element that triggered the event
+- `keyCode`: get's the code of the key pressed.
+
+
+## JSON
+1. Ensemble nom, valeur
+2. Can create a table with`[ ]`
+
+- JSON.parse(txt)
+- JSON.stringify(object)
+
+## Synchronous and asynchronous in JS
+- Concurrency: multiple tasks t the same time but no simultaneously
+- Prallelism: multiple taks simultaneously
+- synchronous programming: tasks one after the other
+- Asynchronous programming: one task can execute while the other one
+	pauses 
+## Asynchronous in JS	
+- from call stack to webapi
+- from webapi to callback queue
+- the event loop checks the call stack if empty check callback queue
+
 
