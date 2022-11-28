@@ -96,11 +96,11 @@ const p = document.getElementById('elementId');
 const p1=document.getElementByTagName();
 //this returns an HTML collection
 ```
-2. the querySelector(CSS)
+3. the querySelector(CSS)
 ```
-var e =doument.querySelector('*') //all element of all types
-var e =doument.querySelector('h1') //first h1 element
-var e =doument.querySelector('div>p') // first child of div of type p
+var e =document.querySelector('*') //all element of all types
+var e =document.querySelector('h1') //first h1 element
+var e =document.querySelector('div>p') // first child of div of type p
 var e =document.queryselecor('.myclass') // select his class
 var e =document.queryselecor('[href]') // select node with the attr href 
 var e =document.querySelectorAll('') // 

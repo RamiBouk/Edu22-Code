@@ -1,26 +1,50 @@
---1 
-SELECT NOS FROM COMMANDE WHERE QUANTITE>10;
+drop table stats;
 
---2 
-SELECT NOP,1.2*POIDS FROM PIECE;
+create table STATS(
+NOMTABLE varchar(20),
+NBMAJ NUMBER
+);
+insert into stats values('EMP',20);
+insert into stats values('DEPT',30);
+create table DEPT(
+id number,
+nom varchar(20))
 
---3 
-SELECT COUNT(UNIQUE NOS)FROM COMMANDE;
+Select * from EMP;
 
---4
-SELECT AVG(QUANTITE) FROM COMMANDE WHERE NOP=1;
 
---5 
-SELECT * FROM PIECE WHERE NOP IN(
-SELECT NOP FROM COMMANDE WHERE NOS=1);
+update emp set emp.name='nom';
+Select * from stats;
 
---6
-SELECT NOS  FROM COMMANDE C 
-WHERE (SELECT SUM(QUANTITE) FROM COMMANDE WHERE NOS=C.NOS AND NOP=1)=
-(SELECT SUM(QUANTITE) FROM COMMANDE WHERE NOS=C.NOS AND NOP=2)
-;
 
---7
-SELECT  UNIQUE NOS FROM COMMANDE C WHERE
-(SELECT SUM(QUANTITE) FROM COMMANDE WHERE C.NOS=NOS AND C.NOP=2)>
-(SELECT AVG(QUANTITE) FROM COMMANDE WHERE NOP=2);
+create or replace trigger emp__update 
+after update or insert on EMP
+for each row 
+BEGIN
+update STATS set NBMAJ=NBMAJ+1 where nomtable='emp';
+END;
+
+
+
+drop view statown;
+select owner from all_tables where table_name='STATS';
+Select* from statown; 
+create view statown as select owner,SUM(nbmaj) totmaj
+from STATS,all_tables where nomtable=table_name
+group by owner;
+grant select on statown to public;
+
+
+select * from stats;
+ 
+
+create user AB identified by password;
+
+
+
+
+
+
+
+
+
