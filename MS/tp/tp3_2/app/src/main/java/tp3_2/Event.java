@@ -1,3 +1,4 @@
+package tp3_2;
 public class Event{
     protected int type;
     protected double instant;

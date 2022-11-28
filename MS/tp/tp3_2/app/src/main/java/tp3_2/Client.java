@@ -1,4 +1,7 @@
+
+package tp3_2;
 public class Client{
+    protected int indent;
     protected double arrivalTime;
     protected double serviceTime;
     public Client(double arrivalTime,double serviceTime){
