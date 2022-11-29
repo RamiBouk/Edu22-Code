@@ -2,7 +2,7 @@ package tp3_2;
 import java.util.*;
 public class ListEvents{
 
-    Vector events;
+    Vector<Event> events;
     public ListEvents(){
         events=new Vector();
     }
@@ -16,6 +16,9 @@ public class ListEvents{
         }
 
         events.insertElementAt(newEvent,insertIndex);
+    }
+    public Event getNextEvent(){
+        return events.lastElement();
     }
 
 }

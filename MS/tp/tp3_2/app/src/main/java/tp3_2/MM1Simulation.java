@@ -4,8 +4,8 @@ import java.lang.*;
 public class MM1Simulation{
     double lambda;
     double mu;
-    ListEvents list;
-    Queue q;
+    ListEvents list=new ListEvents();
+    Queue q=new Queue();
     double t;
 
     public MM1Simulation(double lambda,double mu){
@@ -15,6 +15,48 @@ public class MM1Simulation{
 
     public double expo(double taux){
         return -Math.log(Math.random())/taux;
+    }
+    public void new_simulate()throws Exception{
+        System.out.println("hey");
+        double t=0 ,tn=0;
+        Event e=new Event(1,0);
+        list.addEvent(e);
+        int i=0;
+        while(i<60){
+            e=list.getNextEvent();
+            t=e.instant;
+            if(e.type==1){
+                tn=t+expo(lambda);
+                double  s=expo(mu);
+                Event en=new Event(1,tn);
+                list.addEvent(en);
+                Client c =new Client(t,s);
+                q.addClient(c);
+                System.out.println("entering at "+t+" service duration "+s +" \n");
+                Event en2=new Event(2,t+s);
+                list.addEvent(en2);
+
+
+                
+                // if last
+                // ajouteer event corespending to them lieaving with t+serice as exist time 
+                //
+
+
+            }
+            if(e.type==2){
+                System.out.println("leaving at :"+e.instant);
+                q.removeLast();
+
+                if(q.isEmpty()){
+                    tn=t+expo(mu);
+                    list.addEvent(new Event(1,tn));
+                }
+
+
+            }
+            i++;
+        }
     }
 
     public void simulate(){

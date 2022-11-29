@@ -5,9 +5,9 @@ package tp3_2;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         MM1Simulation ms=new MM1Simulation(1,1);
-        ms.simulate();
+        ms.new_simulate();
     }
 }
