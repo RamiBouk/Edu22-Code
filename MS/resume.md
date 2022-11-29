@@ -74,4 +74,54 @@ under certaine conditions $X_n$ converge to $\lambda$
 - i$\to$j and j$\to$i: i and j comunicate(i and j are equivalant)
 	- this is what cause irredictable classes
 
-# Probability d'absorption??????
+# Probability d'absorption
+$$
+a^{(Ri)}=a^{(Ri)}(1)+PT*a^{(Ri)}
+$$
+$$
+ R1={1,2,3,4}\\ 
+ a_5=2/7+3/7 
+ a_5+2/7 a_6  \\
+ a_6=1/2 a_5 \\
+ a_7=1/6 a_6\\
+ a5= 2/3          \      a6= 1/3      \           a7= 1/18\\
+
+ R2={8}\\
+ =3/7 a_5+2/7 a_6\\                              a_6=1/2+1/2 a_5\\                                 a_7=5/6+1/6 a_6\\
+ a5= 1/3\\                    a6= 2/3\\                          a7=17/18\\
+
+$$
+# Les filles d'attente markoviennes
+add poisson law here
+
+- $\lambda$ the average number of occurences per unite of time(taux de
+naissance)
+
+- ${\mu}$ services per unite of time ($\mu$ taux de mort)
+- il y a $S$ server
+- $X_t$ l'etat du systeme en $t$
+- les point de changement sont pas exact au temps
+- $L$ le nombre moyen de client dans le systeme
+- $Lq$ nombre moyen de client dans le queue d'attente
+- $Wq$ durree d'attente moyenne d'un client
+- $W$ la duree moyenne dans le systeme
+## M/M/1
+- $\mu p_1=\lambda p_0$
+- $\mu p_2+\lambda p_0=\mu p_1+\lambda p_1$
+- $u=\lambda/\mu$
+- $p_0=1-u$
+- $p_n=u^np_0$
+- $L=\frac{u}{1-u}$
+- $Lq=\frac{u^2}{1-u}$
+
+### Any type of F.A.M
+- $L=\sum_{i=1}^n np_n$
+- $L_q=\sum_{n=s+1}^{+\infin} (n-s)p_n$
+
+## Formules de little
+- $L=\lambda W$
+- $L_q=\lambda W_q$
+- $L=L_q+\frac{\lambda}{\mu}$
+- $W=W_q+\frac{1}{\mu}$
+
+
