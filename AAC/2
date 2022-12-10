@@ -1,3 +1,4 @@
+
 import pandas as pd
 from random import random
 from math import floor
@@ -23,10 +24,8 @@ def merge_sort(array):
     length = len(array)
     if (length == 1):
         return array
-
     array1 = merge_sort(array[:length//2])
     array2 = merge_sort(array[length//2:])
-
     i, j = 0, 0
     result_array = []
     while (len(array1) and len(array2)):
@@ -45,11 +44,9 @@ def quick_sort(array):
     poped = array.pop()
     sorted_array = quick_sort(array)
     length = len(sorted_array)
-
     if (poped >= sorted_array[length-1]):
         sorted_array.append(poped)
         return sorted_array
-
     high, low = length-1, 0
     while (low < high):
         mid = (high+low)//2
@@ -57,7 +54,6 @@ def quick_sort(array):
             high = mid
         else:
             low = mid+1
-
     sorted_array.insert(low, poped)
     return sorted_array
 
@@ -76,13 +72,10 @@ def heapify(arr, N, root):
     largest = root
     left = 2*root+1
     right = 2*root+2
-
     if left < N and arr[largest] < arr[left]:
         largest = left
-
     if right < N and arr[largest] < arr[right]:
         largest = right
-
     if largest != root:
         arr[root], arr[largest] = arr[largest], arr[root]
         heapify(arr, N, largest)
@@ -92,11 +85,9 @@ def heap_sort(arr):
     N = len(arr)
     for i in range(N//2 - 1, -1, -1):
         heapify(arr, N, i)
-
     for i in range(N-1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]
         heapify(arr, i, 0)
-
     return arr
 
 
@@ -197,7 +188,6 @@ def main():
     args = parser.parse_args()
 
     sys.setrecursionlimit(50000)
-
     times = {}
     arr_sizes = []
     durations = []
