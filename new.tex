@@ -1,0 +1,480 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,stmaryrd}
+
+\begin{document}
+
+{\hspace{21em}}Sahraoui Yousra , Sp{\'e}cialit{\'e}:EDP
+
+{\hspace{9em}}\begin{tabular}{l}
+  Solution devoir M{\'e}thode d'analyse fonctionnelle.
+\end{tabular}
+
+Exo-1: Etablire les in{\'e}galit{\'e}s de H'older et Minkowski pour les
+suites.
+
+Solution:
+
+i/In{\'e}galit{\'e} de H'older: soit $x_k$ et $y_k \in \mathbb{C}^n$ , pour
+toute p,q$\in \mathbb{R}^{\ast}_+ $tq: $\frac{1}{p} + \frac{1}{q} = 1$
+
+Alors:$\sum_{k = 1}^n | x_k y_k | \leq$($\sum_{k = 1}^n | x_k
+|^p$)$^{\frac{1}{p}} (\sum_{k = 1}^n | y_k |^q)^{\frac{1}{q}}$.
+
+ii/In{\'e}galit{\'e} de Minkowski: soit $x_k$ et $y_k \in \ell^p,$pour $p \geq
+1$
+
+Alors: $\left( \sum_{k = 1}^n | x_k + y_k |^p \right)^{\frac{1}{p}}
+\leq$($\sum_{k = 1}^n | x_k |^p$)$^{\frac{1}{p}}$+($\sum_{k = 1}^n | y_k
+|^p$)$^{\frac{1}{p}}$.
+
+D{\'e}monstration:
+
+(i):On a $\frac{1}{p} x^p + \frac{1}{q} y^q \geq x y$pour tout $(x, y) \in
+\mathbb{R}_+$, pour tout $(p, q) \in \mathbb{R}^{\ast}$
+
+Alors: $x y \leq \frac{x^p}{p} + \frac{y^q}{q}$ on sait que ln est une
+fonction concave
+
+Donc: $\ln \left( \frac{1}{P} x  + \frac{1}{q} y  \right) \geq \frac{1}{P}
+\ln (x ) + \frac{1}{q} \ln (y ) \Rightarrow \ln \left( \frac{1}{P} x^p +
+\frac{1}{q} y^q \right) \geq \frac{1}{p} \ln (x^p) + \frac{1}{q} \ln (y^q) =
+\ln (x) + \ln (y) = \ln (x y)$
+
+$\Rightarrow \ln \left( \frac{1}{P} x  + \frac{1}{q} y  \right) \geq \ln (x y)
+\Rightarrow \frac{1}{P} x  + \frac{1}{q} y  \geq x y \cdots (1)$
+
+On suppose que: $\sum_{k = 1}^n | x_k |^p = 1$et $\sum_{k = 1}^n | y_k
+|^q$=1$\cdots (\ast)$
+
+$(1) \Leftrightarrow | x_k y_k | \leq \left| \frac{1}{p} x^p + \frac{1}{q} y^q
+\right| \leq \frac{| x |^p}{p} + \frac{| y |^q}{q} \Rightarrow \sum_{k = 1}^n
+| x_k y_k | \leq \sum_{k = 1}^n \frac{| x |^p}{p} + \sum_{k = 1}^n \frac{| y
+|^q}{q} \Rightarrow \frac{1}{p} \sum_{k = 1}^n | x |^p + \frac{1}{q} \sum_{k =
+1}^n | y |^q$
+
+D'apr{\'e}s $(\ast) \ensuremath{\operatorname{on}}a : \sum_{k = 1}^n | x_k y_k
+| \leq \frac{1}{p} + \frac{1}{q} = 1$(par hypoth{\'e}se)
+
+comme $\sum_{k = 1}^n | x_k |^p = 1$et $\sum_{k = 1}^n | y_k |^q$=1
+$\Rightarrow$($\sum_{k = 1}^n | x_k |^p$)$^{\frac{1}{p}} = 1$et $(\sum_{k =
+1}^n | y  |^q)^{\frac{1}{q}}$=1
+
+Donc:($\sum_{k = 1}^n | x_k |^p$)$^{\frac{1}{p}} (\sum_{k = 1}^n | y 
+|^q)^{\frac{1}{q}} = 1$
+
+Finalement:$\sum_{k = 1}^n | x_k y_k | \leq$($\sum_{k = 1}^n | x_k
+|^p$)$^{\frac{1}{p}}$($\sum_{k = 1}^n | y_k |^q$)$^{\frac{1}{q}}$.
+
+(ii)soit $x_k$ et $y_k \in \ell^p$
+
+pour $p = 1 : \sum_{k = 1}^n | x_k + y_k |  \leq \sum_{k = 1}^n | x_k |
+$+$\sum_{k = 1}^n | y_k |  $v{\'e}rifi{\'e}e
+
+puisque  $| x_k + y_k |  \leq | x_k | $+$| y_k |  $pour tout $k$de $\mathbb{N}
+\Rightarrow \sum_{k = 1}^n | x_k + y_k |  \leq \sum_{k = 1}^n | x_k |
+$+$\sum_{k = 1}^n | y_k |  $.
+
+pour $p > 1 : \sum_{k = 1}^n | x_k + y_k |^p = \sum_{k = 1}^n | x_k + y_k |^{p
+- 1} | x_k + y_k | \leq \sum_{k = 1}^n | x_k + y_k |^{p - 1} (| x_k | + | y_k
+|)$
+
+{\hspace{11em}}$\leq \sum_{k = 1}^n | x_k | | x_k + y_k |^{p - 1}$ +$\sum_{k =
+1}^n | y_k | | x_k + y_k |^{p - 1}$
+
+{\hspace{5em}}$\leq \left( \sum_{k = 1}^n | x_k |^p \right)^{\frac{1}{p}}
+\left[ \sum_{k = 1}^n (| x_k + y_k |^{p - 1})^q \right]^{\frac{1}{q}} + \left(
+\sum_{k = 1}^n | y_k |^p \right)^{\frac{1}{p}} \left[ \sum_{k = 1}^n (| x_k +
+y_k |^{p - 1})^q \right]^{\frac{1}{q}}$
+
+$(p - 1) q = p$ ,puisque:$\left[ \frac{1}{p} + \frac{1}{q} = 1 \Rightarrow
+\frac{p + q}{p q} = 1 \Rightarrow p = p q - q \Rightarrow p = q (p - 1)
+\right]$
+
+$\Rightarrow$ $\sum | x_k + y_k |^p \leq \left( \sum | x_k + y_k |^p
+\right)^{\frac{1}{q}} \left[ \sum \left( | x_k |^p {\right) }^{\frac{1}{p}} +
+\sum \left( | x_k |^p {\right) }^{\frac{1}{p}} \right]$
+
+$\Rightarrow \left[ \sum | x_k + y_k |^p \right]^{1 - \frac{1}{q}} \leq \sum
+{(| x_k |^p) }^{\frac{1}{p}} + \sum {(| x_k |^p) }^{\frac{1}{p}} \hspace{3em},
+1 - \frac{1}{q} = \frac{1}{p}$
+
+$\Rightarrow \left[ \sum | x_k + y_k |^p \right]^{\frac{1}{p}} \leq \sum {(|
+x_k |^p) }^{\frac{1}{p}} + \sum {(| x_k |^p) }^{\frac{1}{p}}$ .
+
+Exo-2: {\'e}noncer et montrer le th{\'e}or{\`e}me de Baire.
+
+Solution:
+
+Soit $X$un espace m{\'e}trique complet
+
+Soit $(x_n)_{n \geq 1}$ une suite des ferm{\'e}s de $X$, Si
+$\ensuremath{\operatorname{Int}} (\cup^{\infty}_{n = 1} x_n) \neq \phi$Alors,
+il existe au moins un ferm{\'e} $n_0, \ensuremath{\operatorname{Int}} (x_{n_0}
+\neq \phi) .$
+
+D{\'e}monstration:
+
+On pose : $O_n = x^c_n$ telle que $O_n$ est un ouvert dense.Il s'agit de
+montrer que $G = \bigcap^{\infty}_{n = 1} O_n$ est dense dans $X$.
+
+Soit $W$ un ouvert non vide de $X$; on va prouver que $W \bigcap G \neq \phi$
+.
+
+On note $B (x, r) = \{ y \in X ; d (y, x) < r \}$ on choisit $x_0 \in W$ et
+$r_0 > 0$ arbitraires tel que $\bar{B}  (x_0, r_0) \subset W .$
+
+On choisit ensuite $x_1 \in B (x_0, r_0) \cap O_1$ et $r_1 > 0$ tel que
+$\bar{B}  (x_1, r_1) \subset B (x_0, r_0) \cap O_1$ et $0 < r_1 <
+\frac{r_0}{2}$
+
+cice est possible puisque $O_1$ est ouvert et dense .Ainsi de suite,on
+construit par r{\'e}currence deux suites $(x_n)$ et $(r_n)$ tel que $\bar{B} 
+(x_{n + 1}, r_{n + 1}) \subset B (x_n, r_n) \cap O_{n + 1} \forall n \geq 0$
+et $0 < r_{n + 1} < \frac{r_n}{2}$
+
+En r{\'e}sulte que la suite $(x_n)$ est de cauchy ; soit $x_n \rightarrow l$
+comme $x_{n + p} \in B (x_n, r_n)$ pour tout $n \geqslant 0$ et tout $p \geq
+0$, on obtient {\`a} la limite (quand $p \rightarrow \infty$ ): $l \in \bar{B}
+(x_n, r_n) \forall n \geq 0$
+
+En particulier $l \in W \cap G$.
+
+Exo-3: Soient $X$ un $Y$ deux espaces vectoriels norm{\'e}s et $T \in
+\mathcal{L} (X, Y)$. Montrer que
+
+{\hspace{11em}}$\bigparallel T \bigparallel = \sup_{_{x \neq 0}} 
+\frac{\bigparallel T  x \bigparallel}{\bigparallel x \bigparallel} =
+\sup_{_{\bigparallel x \bigparallel \leqslant 1, x \neq 0}}  \bigparallel T x
+\bigparallel {= \sup_{_{_{\bigparallel x \bigparallel = 1}}}}_{} \bigparallel
+T x \bigparallel$.
+
+Solution:
+
+Soit $X$, $Y$ 2.e.v.n et $T \in (X, Y)$
+
+On prende: $X = \left( E_1, \bigparallel . \bigparallel_1 \right)$ et $Y =
+\left( E_2, \bigparallel . \bigparallel_2 \right)$
+
+Soit $T : E_1 \rightarrow E_2$ , $T \in \mathcal{L} (X, Y)$
+
+Alors: $\bigparallel T \bigparallel = \sup_{_{\bigparallel x \bigparallel_1 <
+1}}  \bigparallel T (x) \bigparallel_2 = \sup_{_{\bigparallel x \bigparallel_1
+\leqslant 1}} \bigparallel T (x) \bigparallel_2 = \sup_{_{\bigparallel x
+\bigparallel_1 = 1}} \bigparallel T (x) \bigparallel_2 = \sup_{_{x \neq 0}} 
+\frac{\bigparallel T (x) \bigparallel_2}{\bigparallel x \bigparallel_1}$
+
+D{\'e}monstration: 1.Puisque $T$ est continute, alors l'ensemble
+
+{\hspace{8em}}$B = \left\{ C > 0 ; \bigparallel T (x) \bigparallel_2 \leq C
+\bigparallel x \bigparallel_1 \ensuremath{\operatorname{pour}}x \in E_1
+\right\}$
+
+est non vide, \ donc $\bigparallel T \bigparallel = \inf \{ \mathcal{C};
+\mathcal{C} \in B \}$ existe dans ${R_+} $ . Soit $\mathcal{C} \in B$, Alors
+pour tout $x \in E_1$,
+
+on a $\bigparallel T (x) \bigparallel_2 \leq \mathcal{C} \bigparallel x
+\bigparallel_1$, donc $\sup \bigparallel T (x) \bigparallel_2 \leq
+\mathcal{C}$ .
+
+Par cons{\'e}quent, on a $\sup \bigparallel T (x) \bigparallel_2 \leq \inf \{
+\mathcal{C}; \mathcal{C} \in B \} = \bigparallel T \bigparallel$. Pour tout $x
+\neq 0$, on a
+
+$\frac{\bigparallel T (x) \bigparallel_2}{\bigparallel x \bigparallel_1} \leq
+\sup_{_{x \neq 0}} \frac{\bigparallel T (x) \bigparallel_2}{\bigparallel x
+\bigparallel_1} $,donc pour tout $x \in E_1$, on a $\bigparallel T (x)
+\bigparallel_2 \leq \left( \sup_{_{x \neq 0}}  \frac{\bigparallel T (x)
+\bigparallel_2}{\bigparallel x \bigparallel_1} \right)  \bigparallel x
+\bigparallel_1$ ,
+
+d'ou $\bigparallel T \bigparallel \leq \sup_{_{x \neq 0}}  \frac{\bigparallel
+T (x) \bigparallel_2}{\bigparallel x \bigparallel_1}$ . Soit $x \in E_1$ tel
+que $x \neq 0$, alors on a :
+
+$\frac{\bigparallel T (x) \bigparallel_2}{\bigparallel x \bigparallel_1} =
+\bigparallel \frac{1}{\bigparallel x \bigparallel_1} T (x) \bigparallel_2 =
+\bigparallel T \left( \frac{x}{\bigparallel x \bigparallel_1} \right)
+\bigparallel_2 \leq \sup_{_{\bigparallel x \bigparallel_1 = 1}}  \bigparallel
+T (x) \bigparallel_2 \leq \sup_{_{\bigparallel x \bigparallel_1 \leqslant 1}} 
+\bigparallel T (x) \bigparallel_2 \leq \bigparallel T \bigparallel$.
+
+Donc on a $\sup_{_{x \neq 0}}  \frac{\bigparallel T (x)
+\bigparallel_2}{\bigparallel x \bigparallel_1} \leq \sup_{_{\bigparallel x
+\bigparallel_1 = 1}}  \bigparallel T (x) \bigparallel_2 \leq
+\sup_{_{\bigparallel x \bigparallel_1 \leqslant 1}}  \bigparallel T (x)
+\bigparallel_2 \leq \bigparallel T \bigparallel$. Par cons{\'e}quent,
+
+on a $\bigparallel T \bigparallel = \sup_{_{\bigparallel x \bigparallel_1
+\leqslant 1}} \bigparallel T \bigparallel_2 = \sup_{_{\bigparallel x
+\bigparallel_1 \leqslant 1}} \bigparallel T \bigparallel_2 =
+\sup_{_{\bigparallel x \bigparallel_1 = 1}}  \frac{\bigparallel T (x)
+\bigparallel_2}{\bigparallel x \bigparallel_1}$ .
+
+On a $\sup_{_{\bigparallel x \bigparallel_1 < 1}}  \bigparallel T
+\bigparallel_2 {\leq \sup_{_{\bigparallel x \bigparallel_1 \leqslant 1}}}_{} 
+\bigparallel T \bigparallel_2 = \bigparallel T \bigparallel $.
+
+Il reste {\`a} montrer l'in{\'e}galit{\'e} invers. Soit $x \in E  $ tel que
+$\bigparallel x \bigparallel_1 \leq 1$, alors pour tout $n \geq 1$ on a
+
+$\bigparallel \left( 1 - \frac{1}{n} \right) x \bigparallel_1 = \left( 1 -
+\frac{1}{n} \right) \bigparallel x \bigparallel_1 < 1$ , d'ou $\left( 1 -
+\frac{1}{n} \right) \bigparallel T (x) \bigparallel_2 = \bigparallel T \left(
+\left( 1 - \frac{1}{n} \right) x \right) \bigparallel_2 \leq
+\sup_{_{\bigparallel x \bigparallel_1 < 1}}  \bigparallel T (x)
+\bigparallel_2$.
+
+quand $n$ tendre vers $+ \infty$ , on obtient $\bigparallel T \bigparallel_2
+\leq \sup_{_{\bigparallel x \bigparallel_1 < 1}} \bigparallel T
+\bigparallel_2$.
+
+Par cons{\'e}quent, on a $\bigparallel T \bigparallel \leq
+\sup_{_{\bigparallel x \bigparallel_1 < 1}}  \bigparallel T \bigparallel_2$.
+
+Exo-4:Montrer que les op{\'e}rateurs lin{\'e}aires born{\'e}s coincident avec
+les op{\'e}rateurs lin{\'e}aires continus.
+
+Solution: soit $\left( E_1, \bigparallel \bigparallel_1 \right), \left( E_2,
+\bigparallel \bigparallel_2 \right) 2$espaces norm{\'e}s et $T : E_1
+\rightarrow E_2 $une application lin{\'e}aire
+
+(i)T born{\'e}e \ $\Rightarrow T$continue
+
+d{\'e}mo:soit $T$ born{\'e}e i.e: il existe une constante M$> 0$telle que pour
+tout $x \in E_1$, on ait \ $\bigparallel T (x) \bigparallel_2 \leq M.$
+
+soit $x \in E_1, \ensuremath{\operatorname{avec}}x \neq 0,
+\mathbf{f}\ensuremath{\operatorname{on}}\ensuremath{\operatorname{pose}}: \eta
+= \bigparallel \frac{\eta x}{\bigparallel x \bigparallel_1} \bigparallel_1$
+
+d'ou: $\bigparallel T \left( \frac{\eta x}{\bigparallel x \bigparallel_1}
+\right) \bigparallel_2 = \bigparallel \frac{\eta}{\bigparallel x
+\bigparallel_1} T (x) \bigparallel_2 = \frac{\eta}{\bigparallel x
+\bigparallel_1} \bigparallel T (x) \bigparallel_2$, d'ou:$\bigparallel T (x)
+\bigparallel_2 \leq \frac{\varepsilon}{\eta} \bigparallel x \bigparallel_1 .$
+il suffit maintenant de prendre $M = \frac{\varepsilon}{\eta}$
+$\Leftrightarrow \bigparallel T (x) \bigparallel_2 \leq M \bigparallel x
+\bigparallel_1$qui est v{\'e}rifi{\'e}e que T continue$\cdots (1)$
+
+(ii)$T$continue$\Rightarrow$T born{\'e}e
+
+d{\'e}mo:soit T est continue i.e:il existe une constante $M > 0$telle que pour
+tout $x \in E_1,$on ait
+
+$\bigparallel T (x) \bigparallel_2 \leq M \bigparallel x \bigparallel_1$, si
+on pose $\bigparallel x \bigparallel_1 = 1 \Rightarrow  \bigparallel T (x)
+\bigparallel_2 \leq M$ce qui donne $T$ est born{\'e}.
+
+Exo-5:Soient $X$ un espace vectoriel norm{\'e} et $M$ un sous-espace de $X$.On
+d{\'e}finit sur $X$la relation binaire
+
+{\hspace{13em}}$x\mathcal{R}y$ si seulement si $x - y \in M.$
+
+Montrer que $\mathcal{R}$ est une relation d'{\'e}quivalance. On note $X /
+M$l'ensemble des classes d'{\'e}quivalence pour la relation
+pr{\'e}c{\'e}dente. En notant la classe de $x$par $[x]$.V{\'e}rifier que pour
+les op{\'e}rations
+
+{\hspace{13em}}$[x] + [y] = [x + y]$ et $\alpha [x] = [\alpha x] .$
+
+L'espace $X / M$ est une espace vectoriel. Si $M$est ferm{\'e}, montrer que
+$\bigparallel [x] \bigparallel = \inf \bigparallel y \bigparallel$est une
+norme sur $X / M.$
+
+Montrer que si $M$ est ferm{\'e} dans un espace de Banach $X$,alors $X / M$
+est un espace de Banach.
+
+Soit $T \in \mathcal{L} (X, Y)$et M un sous-espace ferm{\'e} de $\ker (T) .$On
+d{\'e}finit $\hat{T} : X / M \rightarrow Y$par $\hat{T} ([x]) = T x,$montrer
+alors que $\hat{T}$ est un op{\'e}rateur lin{\'e}aire born{\'e}.
+
+Supposons que $X, Y$, et $Z$ sont des espaces de Banach, U$\in \mathcal{L} (X,
+Y)$ est surjectif et $l \in \mathcal{L} (X, Y) $. Si $\ker (U) \subset \ker
+(l),$montrer qu'il existe un op{\'e}rateur $T \in \mathcal{L} (Y, Z)$ tel que
+$l = T U.$(Th{\'e}or{\'e}me de Sard). \ \ \ \ \ \
+
+Solution:
+
+-montrons que $\mathcal{R}$ est une relation d'{\'e}quivalence
+
+d'ou:$\mathcal{R}$ est une relation d'{\'e}quivalence:
+
+$\mathcal{R}$est dit relation d'{\'e}quivalence si elle est reflexive,
+sym{\'e}trique et transitive .
+
+i-$\forall x \in M, x\mathcal{R}x \Leftrightarrow x - x = 0 \in M \quad
+$alors: $\mathcal{R}$ reflexive.
+
+ii-$\forall x, y \in M, x\mathcal{R}y \Leftrightarrow x - y \in M \Rightarrow
+- (y - x) \in M \Rightarrow y\mathcal{R}x$\quad
+alors:$\mathcal{R}$sym{\'e}trique.
+
+iii-$\forall x, y, z \in M, \{ x\mathcal{R}y \Leftrightarrow x - y \in M
+\cdots (1) \ensuremath{\operatorname{et}}y\mathcal{R}z \Leftrightarrow y - z
+\in M \cdots (2) \}$
+
+$\Rightarrow (1) + (2) : x - y + y - z = x - z \in M \Rightarrow
+x\mathcal{R}z.$\quad alors:$\mathcal{R}$ transitive.
+
+Finalement, $\mathcal{R}$est une relation d'{\'e}quivalence.
+
+-montrons que l'espace $X / M$ est une espace vectoriel:
+
+Soit l'application $\pi : X \rightarrow X / M$, et soit $x_1, x_2, y_1, y_2
+\in X$et $\lambda \in \mathbb{K}$ tel que: $x_1 \mathcal{R}y_1$et $x_2
+\mathcal{R}y_2$
+
+Alors:$(x_1 + x_2) - (y_1 + y_2) = (x_1 - y_1) + (x_2 - y_2) \in X$, et
+$\lambda x_1 - \lambda y_1 = \lambda (x_1 - y_1) \in X$.
+
+Autrement dit, si $\pi (x_1) = \pi (y_1)$ et $\pi (x_2) = \pi (y_2)$, alors on
+a $\pi (x_1 + x_2) = \pi (y_1 + y_2)$et $\pi (\lambda x_1) = \pi (\lambda
+y_1)$
+
+Donc, par cons{\'e}quent l'espace $X / M$ est une espace vectoriel 
+
+-montrons que $\bigparallel [x] \bigparallel = \inf_{y \in [x]}
+\text{{\textsc{}}} \bigparallel y \bigparallel$est une norme sur $X / M$
+
+i-$\bigparallel [x] \bigparallel = 0 \Rightarrow \inf_{y \in [x]}
+\text{{\textsc{}}} \bigparallel y \bigparallel = 0 \Rightarrow \bigparallel y
+\bigparallel = 0 \Rightarrow y = 0$.
+
+ii-$\bigparallel \alpha [x] \bigparallel = \bigparallel [\alpha x]
+\bigparallel = \inf_{y \in [x]} \text{{\textsc{}}} \bigparallel \alpha y
+\bigparallel = \inf_{y \in [x]} \text{{\textsc{}}} \left( | \alpha |
+\bigparallel y \bigparallel \right) = | \alpha | \inf_{y \in [x]}
+\text{{\textsc{}}} \bigparallel y \bigparallel = | \alpha | \bigparallel [x]
+\bigparallel .$
+
+iii-soit $y_1 \in [x_1], y_2 \in [x_2]$
+
+$\bigparallel [x_1 + x_2] \bigparallel = \inf  \text{{\textsc{}}} \bigparallel
+y_1 + y_2 \bigparallel \leq \inf \left( \bigparallel y_1 \bigparallel +
+\bigparallel y_2 \bigparallel \right) \leq \inf_{y_1 \in [x_1]} \bigparallel
+y_1 \bigparallel + \inf_{y_2 \in [x_2]} \bigparallel y_2 \bigparallel =
+\bigparallel [x_1] \bigparallel + \bigparallel [x_2] \bigparallel .$
+
+Finalement:$\bigparallel [x] \bigparallel = \inf_{y \in [x]}
+\text{{\textsc{}}} \bigparallel y \bigparallel$est une norme sur $X / M$.
+
+-Montrer que si $M$ est ferm{\'e} dans un espace de Banach $X$,alors $X / M$
+est un espace de Banach.
+
+puisque $M$ est un ferm{\'e} dans $X$qui est un espace de Banach,Alors $M$est
+de Banach
+
+Soit $(z_n)_{n \geq 0}$ une suite de cauchy dans $X / M$, Alors: il existe une
+sous-suite $(z_{Q (n)})_{n \geq 0}$ de $(z_n)_{n \geq 0}$ telle que pour tout
+$n \geq 0$ , on ait $\bigparallel z_{Q (n + 1)} - z_{Q (n)} \bigparallel' <
+2^{- n} .$
+
+De plus, la suite $(z_n)_{n \geq 0}$ est convergente si est seulement si la
+sous-suite $(z_{Q (n)})_{n \geq 0}$ est covergente. On montre facilement par
+r{\'e}currence qu'il existe une suite $(x_n)_{n \geq 0}$ dans $X$ telle que,
+por tout $n \geq 0$ on ait $\pi (x_n) = z_{Q (n)} $et $\bigparallel x_{n + 1}
+- x_n \bigparallel < 2^{- n} .$
+
+Alors: la suite $(x_n)_{n \geq 0}$ est de cauchy dans $X$.donc, elle converge
+vers $\pi (x)$. \ \
+
+Par cons{\'e}quent, la suite $(z_n)_{n \geq 0}$ coverge vers $\pi (x)$ donc:
+$X / M$ est de Banach.
+
+Soit $T \in \mathcal{L} (X, Y)$et M un sous-espace ferm{\'e} de $\ker (T) .$On
+d{\'e}finit $\hat{T} : X / M \rightarrow Y$par $\hat{T} ([x]) = T x,$montrer
+alors que $\hat{T}$ est un op{\'e}rateur lin{\'e}aire born{\'e}.
+
+soit $[x], [y] \in X / M : \quad \hat{T} ([x + y]) = T (x + y) = T x + T y =
+\hat{T} ([x]) + \hat{T} ([y])$
+
+soit $[x] \in X / M$ et $\alpha \in \mathbb{K}, \hat{T} ([\alpha x]) = T
+(\alpha x) = \alpha T (x)$=$\alpha \hat{T} ([x])$,Alors: $\hat{T}$ est
+lin{\'e}aire .
+
+Alors: $\hat{T}$ est lin{\'e}aire .
+
+et comme $\bigparallel \hat{T} ([x]) \bigparallel = \bigparallel T x
+\bigparallel \leq \mathcal{C} \bigparallel x \bigparallel$alors: $\bigparallel
+\hat{T} ([x]) \bigparallel \leq \mathcal{C} \bigparallel [x] \bigparallel .$
+Alors,$\hat{T}$ est born{\'e}e
+
+D'ou:$\hat{T} \in \mathcal{L} (X, Y) .$ 
+
+Exo-7:soient X,Y deux espaces vectoriels norm{\'e}s.consid{\'e}rons
+l'op{\'e}rateur $(A, \mathcal{D}_A)
+\ensuremath{\operatorname{de}}X\ensuremath{\operatorname{dans}}Y${\`a} domaine
+$\mathcal{D}_A$dense dans X.$(A^{\ast}, \mathcal{D}_{A^{\ast}})${\'e}tant le
+dual de $(A, \mathcal{D}_A)
+.\ensuremath{\operatorname{Montrer}}\ensuremath{\operatorname{que}}\mathcal{D}_{A^{\ast}}
+= Y' $si seulement si A est born{\'e} sur $\mathcal{D}_A$et que dans ce cas
+$A^{\ast} \in \mathcal{L} {(Y', X') } $ et $\bigparallel A \bigparallel =
+\bigparallel A^{\ast} \bigparallel$.
+
+Solution:
+
+$\Rightarrow$) soit $\mathcal{D}_{A^{\ast}} = Y'$ ceci revient: pour toute $f
+\in Y', \langle A x, f \rangle$d{\'e}finit une foncionnelle born{\'e}e dans
+$X'$
+
+autrement dit:$M = A \{ \mathcal{D}_A \cup B \}$est faiblement born{\'e}e ,
+Avec:$M$ est l'image par A de l'union de $\mathcal{D} (A)$avex la Boule
+unit{\'e} .
+
+tel ensemble est donc born{\'e}, i.e. il existeune constante $\mathcal{C}$
+telle que $\bigparallel A x \bigparallel \leq \mathcal{C}$pour tout $X \in
+\mathcal{D} (A) \cup B$
+
+Alors: $A$est born{\'e} sur $\mathcal{D} (A) \cdots (1)$
+
+$\Leftarrow$)soit $A$ born{\'e} sur $\mathcal{D} (A) $Alors:$\langle A x, f
+\rangle$est born{\'e} en $x \in \mathcal{D} (A)$ sur\quad chaque ensemble
+born{\'e} et pour tout $f \in Y'$ D'ou: par cons{\'e}quent $\mathcal{D}
+(A^{\ast}) = Y \cdots (2)$
+
+D'apr{\'e}s $(1)$ et $(2) : \mathcal{D}_{A^{\ast}} = Y' \Leftrightarrow
+\mathcal{D} (A^{\ast}) = Y$
+
+Comme $A^{\ast}$duale de $A \Rightarrow \langle A x, f \rangle = \langle x, A
+f^{\ast} \rangle $Alors:
+
+$| \langle x, A^{\ast} f \rangle | = | \langle A x, f \rangle | \leqslant
+\bigparallel A x \bigparallel \bigparallel f \bigparallel \leq \bigparallel A
+\bigparallel \bigparallel f \bigparallel \bigparallel x \bigparallel$ce qui
+entraine que:$\bigparallel A^{\ast} f \bigparallel \leq \bigparallel A
+\bigparallel \bigparallel f \bigparallel$
+
+i.e.: $\bigparallel A^{\ast} \bigparallel \leq \bigparallel A \bigparallel
+\cdots (\ast)$
+
+d'autre par on a : pour tout $\varepsilon > 0,$il existe $x_{\varepsilon} $tel
+que $\bigparallel x_{\varepsilon} \bigparallel = 1$et $\bigparallel
+\ensuremath{\operatorname{Ax}}_{\varepsilon} \bigparallel > \bigparallel A
+\bigparallel - \varepsilon$
+
+par ailleurs, il existe $f_{\varepsilon} \in Y'$ tel que: $\bigparallel
+f_{\varepsilon} \bigparallel = 1$ et $\langle A x_{\varepsilon},
+f_{\varepsilon} \rangle = \bigparallel A x_{\varepsilon} \bigparallel$
+
+On a donc: $\bigparallel A^{\ast} \bigparallel \geq \bigparallel A^{\ast}
+f_{\varepsilon} \bigparallel \geq | \langle x_{\varepsilon}, A^{\ast}
+f_{\varepsilon} \rangle | = | \langle A x_{_{\varepsilon}}, f_{\varepsilon}
+\rangle | = \bigparallel A x_{\varepsilon} \bigparallel > \bigparallel A
+\bigparallel - \varepsilon$
+
+$\bigparallel A^{\ast} \bigparallel > \bigparallel A \bigparallel -
+\varepsilon$ $\Rightarrow$ $\bigparallel A^{\ast} \bigparallel \geq
+\bigparallel A \bigparallel \cdots (\ast \ast)$
+
+D'apr{\'e}s $(\ast) $et $(\ast \ast) $donc: $\bigparallel A^{\ast}
+\bigparallel = \bigparallel A \bigparallel .$
+
+\
+
+{\hspace{8em}}{\hspace{1pt   }}{\hspace{39em}}
+
+\
+
+\end{document}

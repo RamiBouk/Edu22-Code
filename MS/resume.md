@@ -36,7 +36,7 @@ $$
 \forall n_1,n_2:P\{X_{n_1+1}=y|X_{n_1}=x\}=P\{X_{n_2+1}=y|X_{n_2}=x\}
 $$
 
-## REcurrence et transience:
+## Recurrence et transience:
 ### Transiet 
 There is a way to transende the state(never return to it)
 ### Recurrent
@@ -63,11 +63,11 @@ $X_n$ converge when $n$ is big enough
 $\lambda=(a,b)$ is a mesure of probablity that is invariante for $P$ 
 if :
 $$
-\lambda\times P=\lambda / a+b=1
+\lambda\times P=\lambda\ where \ a+b=1
 $$
 under certaine conditions $X_n$ converge to $\lambda$
 ##
-## Stats Classification
+## States Classification
 - classes irreductibles: etats que communique
 - there's a transient state so they are irruductible disjointed classes
 - i$\to$j: j is accecible to i
@@ -87,8 +87,12 @@ $$
  a5= 2/3          \      a6= 1/3      \           a7= 1/18\\
 
  R2={8}\\
- =3/7 a_5+2/7 a_6\\                              a_6=1/2+1/2 a_5\\                                 a_7=5/6+1/6 a_6\\
- a5= 1/3\\                    a6= 2/3\\                          a7=17/18\\
+ =3/7 a_5+2/7 a_6\\ 
+ a_6=1/2+1/2 a_5\\ 
+ a_7=5/6+1/6 a_6\\
+ a5= 1/3\\ 
+ a6= 2/3\\
+ a7=17/18\\
 
 $$
 # Les filles d'attente markoviennes

@@ -6,7 +6,7 @@
 		<div class="output">
 			what is your name
 		</div>
-		<input type="text"  name="userName" />
+		<input type="text"  name="gmail" />
 		<button>
 			Submit
 		</button>
@@ -16,24 +16,38 @@
 	</body>
 
 	<script charset="utf-8">
+		const out=()=>{
+		let s=document.querySelector('body>input')
+		let div=document.querySelector('div[id="welcome"')
+		div.textContent+=s.value
+		div.style.color='red'
+		}
+		const out2=()=>{
+		let s=document.querySelector('body>input')
+		if(s.value.length>3){
+		let div=document.querySelector('div[id="welcome"]')
+		div.textContent+=s.value
+		div.style.color='green'
+		}
+		}
 
-		// getting the textfield
-		var textField=document.querySelector("input[name=\"userName\"")
+		let button=document.querySelector('button')
+		button.onclick=out
+		button.addEventListener("click",out2)
+		window.addEventListener('keydown',(e)=>{
+		let div=document.querySelector('div[id="welcome"')
+		div.textContent+=e.keyCode
+			
+		})
+		let div=document.querySelector('div[id="welcome"')
+		div.addEventListener("mouseover",(e)=>{
+		console.log(this)
+		div.textContent="hey"
+		})
+		
 
-		//getting the bttton
-		var button=document.querySelector("button")
 
-		// getting the output area
-		var output=document.getElementById("welcome")
 
-		// handeling the event of clicking 
-		let f=()=>{
-		if(textField.value.length>3)
-		output.innerHTML=`welcome ${textField.value} !`
-		else 
-		output.textContent="error"
-	}	
-		button.addEventListener("click",f)
 
 
 		

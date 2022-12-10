@@ -7,7 +7,7 @@ we use callback in jQuery
 
 you can define an array in two different ways 
 ```
-let scores = nwee Array(9,10,8,7,6);
+let scores = new Array(9,10,8,7,6);
 //or 
 let scores=[1,3,4]
 ```
@@ -22,7 +22,7 @@ scores.push(5);
 
 add to the start:
 ```
-scores.unshift();
+scores.unshift(5);
 ```
 ### Removing elements
 remove at the end:
@@ -52,7 +52,7 @@ works like map but does not return a function
 
 has three parameters (currentValuem index , arr)
 ```
-scores.forEach(console.log);
+scores.forEach(value, i, ()=>console.log(`${i}:${value}) );
 ```
 
 ## the filter() function

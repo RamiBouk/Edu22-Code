@@ -5,68 +5,53 @@
 		<ul ></ul>
 	</body>
 	<script charset="utf-8">
+		const type=x=>x.nodeType
+		const name=x=>x.nodeName
+
 		const fruitList=['apple','banana','tomato']
+		//1 
+		let list=document.getElementsByTagName('ul')[0]
+		let _list=document.querySelector('ul')
+		let e 
 
-
-		// getting the element
-
-		let list = document.getElementsByTagName('ul')[0]
-		list=document.querySelector('ul')
-
-
-		// creating avocado	
-
-		let avocadoLine=document.createElement('li')
-		avocadoLine.innerHTML='avocado'
-
-
-		// creating li for each element in list
-
-	fruitList.forEach((fruit )=>{
-		let line=document.createElement('li')
-		line.innerHTML=fruit
-		list.appendChild(line)
+		fruitList.forEach((fruit)=>{
+			e = document.createElement('li')
+			text = document.createTextNode(fruit)
+			e.appendChild(text)
+			list.appendChild(e)
 			})
+		// 2
+		console.log("hey")
+			a = document.createElement('li')
+			text = document.createTextNode('avocado')
+			a.appendChild(text)
+			list.appendChild(a)
+			Array.from(document.getElementsByTagName('li')).forEach(li=>{
+			console.log(li.textContent)
+			if(li.textContent==='tomato')
+			{
+			console.log(li.textContent)
+			li.before(a)
+			}
+			})
+			//3
+			document.querySelector('li').setAttribute('color','red')
+			
+			//4
+			console.log(100+Math.floor(300*Math.random()))
+
+			//5
+			Array.from(document.getElementsByTagName('li')).forEach(e=>
+			e.textContent+=" "+(100+Math.floor(300*Math.random())))
+
+			//6
+			document.querySelector("li").style.fontSize=29
+			document.querySelector("li").style.color='green'
 
 
-		// adding the avocadoLine
-
-		list.insertBefore(avocadoLine,list.lastChild)
-
-
-		//adding attribute
-
-		list.childNodes[0].setAttribute('color','red')
-		
-		
-		// adding random price for each element
-
-		list.childNodes.forEach((liElement)=>{
-		liElement.createAttric
-		liElement.setAttribute('price',`${Math.floor(100+300*Math.random())}`)	
-		})
-		
-
-		//display the price of each element
-
-		list.childNodes.forEach((liElement)=>{
-		liElement.innerHTML+=` price:${liElement.getAttribute('price')}`
-		})
-
-
-		// changing font and color of first element
-
-		list.firstElementChild.style.color='green'
-		list.firstElementChild.style.fontSize='20px'
-		
-
-		// addin the title of list
-// innerHRML and textcontent is not the same one reads the htnl inside one deoes not
-		let title=document.createElement('p')
-		let body=document.body
-		body.insertBefore(title,body.firstChild)
-		document.getElementsByTagName("p")[0].innerHTML='List of <b>fruit</b>'
-		
-
+			//7
+			document.querySelector('ul').before(document.createElement('h1'))
+			document.querySelector('h1').innerHTML="List of fruits"
+			
 	</script>
 </html>

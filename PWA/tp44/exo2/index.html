@@ -19,35 +19,25 @@
 		alreadyRead: true,
 		}
 		]
-		const body=document.querySelector('body')
 
-		// Creating the title	
-		var title=document.createElement('h1')
-		title.innerHTML="My Book List"
-		body.appendChild(title)
-		
-		//  Creating a list
-		var list=document.createElement('ul')
+		// 1 
+		document.querySelector('body').appendChild(document.createElement("h1"))
+		document.querySelector('h1').appendChild(document.createTextNode("My BookList"))
 
-		books.forEach((book)=>{
-			let line=document.createElement('li')
-
-			// the style of the items
-			line.style=`color:${book.alreadyRead?"green":"red"}`
-
-			// the text in the items
-			line.innerHTML=`Title: <b>${book.title}</b>\n
-			Author: <b>${book.author}</b>`
-
-			// adding to the DOM
-			list.appendChild(line)
+		// 2 
+		let ul=document.createElement('ul')
+		books.forEach(book=>{
+		li=document.createElement('li')
+		li.textContent=`title: ${book.title} author: ${book.author}`
+		li.style.color=book.alreadyRead?'green':'red'
+		ul.appendChild(li)
 		})
-		body.appendChild(list)
-
-		// changing the style depending on the reading
 
 
-		
+
+		document.querySelector('body').appendChild(ul)
+
+
 
 
 	</script>
