@@ -16,10 +16,10 @@ public class UDPClient{
                 System.out.println("donner le deuxieme nombre");
                 int N2=clavier.nextInt();
                 String operation=N1+":"+op+":"+N2;
-                DatagramSocket ds =new DatagramSocket(7000);
+                DatagramSocket ds =new DatagramSocket(30000);
                 InetAddress AdrClient=InetAddress.getByName("127.0.0.1");
                 byte[] p=operation.getBytes();
-                DatagramPacket dp = new DatagramPacket(p,p.length,AdrClient,8000);
+                DatagramPacket dp = new DatagramPacket(p,p.length,AdrClient,31000);
                 ds.send(dp);
                 Thread.sleep(1000);
                 byte[] tampon =new byte[1000];
