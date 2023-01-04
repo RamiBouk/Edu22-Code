@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Index</title>
+	</head>
+	<body>
+		bodylkjsdfla
+		<?php
+			$var="hello";
+			//unset($var);
+			echo $var;
+			var_dump($var);
+		?>
+	</body>
+	<script>
+		let body=document.getElementsByTagName("body")[0]
+		const xhr = new XMLHttpRequest(); 
+		console.log(body.innerHTML);
+		xhr.addEventListener("readystatechange", function () {
+		if (this.readyState ==4) {
+			let response=JSON.parse(this.responseText)
+			Object.keys(response.message).forEach((k)=>{
+
+						body.innerHTML+=`<h4> ${k}</h4>`;
+						body.innerHTML+="<ul>"
+						response.message[k].forEach((breed)=> body.innerHTML+=`<li>${breed}</li>`)
+						body.innerHTML+="</ul>"
+						
+					})
+
+		}});
+	xhr.open("GET", "https://dog.ceo/api/breeds/list/all");
+	xhr.send();
+	</script>
+</html>

@@ -1,0 +1,11 @@
+clicking on the notification causes white screen
+you can receive nmeeting invite even while receving meeting invites
+the audoi of the ringing happens twice 
+you cann call yourself
+
+
+
+clicking on notification:
+1. white screen
+2. home screen
+3. page=> ringing notification=> ringing page

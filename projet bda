@@ -1,0 +1,96 @@
+ create table ETUDIANT(
+    rang NUMBER,
+    code_e number primary key,
+    nom varchar(20),
+    prenom varchar(20),
+    moyenne real,
+    specialite varchar(20));
+
+     create table module(code_m varchar(20), intitule varchar(100),coefficient number);
+
+create table NOTES(code_e number,code_m varchar(20), FOREIGN KEY(code_e) REFERENCES ETUDIANT(code_e),FORIGN KEY(code_m) REFERENCES MODULE(code_m))
+
+insert into Etudiant (code_e,nom,prenom) values (10000,'N1','P1');
+insert into Etudiant (code_e,nom,prenom) values (20000,'N2','P2');
+insert into Etudiant (code_e,nom,prenom) values (30000,'N3','P3');
+insert into Etudiant (code_e,nom,prenom) values (40000,'N4','P4');
+insert into Etudiant (code_e,nom,prenom) values (50000,'N5','P5');
+insert into Etudiant (code_e,nom,prenom) values (60000,'N6','P6');
+
+insert into MODULE (code_m,intitule,coefficient) values ('BDA','base de donnees avance',2);
+insert into MODULE (code_m,intitule,coefficient) values ('PWA','programmation web avancee',2);
+insert into MODULE (code_m,intitule,coefficient) values ('MS','modelisation est simulation',3);
+insert into notes values (10000,'BDA',20);
+insert into notes values (10000,'PWA',20);
+insert into notes values (10000,'MS',20);
+insert into notes values (20000,'BDA',10);
+insert into notes values (20000,'PWA',10);
+insert into notes values (20000,'MS', 6);
+insert into notes values (30000,'BDA',4 );
+insert into notes values (30000,'PWA',4 );
+insert into notes values (30000,'MS', 0);
+insert into notes values (40000,'BDA',20);
+insert into notes values (40000,'PWA',20);
+insert into notes values (40000,'MS',20);
+insert into notes values (50000,'BDA',0 );
+insert into notes values (50000,'PWA',0 );
+insert into notes values (50000,'MS', 0);
+insert into notes values (60000,'BDA',1 );
+insert into notes values (60000,'PWA',2 );
+insert into notes values (60000,'MS', 3);
+
+CREATE OR REPLACE TRIGGER rangeValid
+   BEFORE INSERT OR UPDATE OF note
+   ON notes
+   FOR EACH ROW
+BEGIN
+   IF(:new.note < 0 OR :new.note > 20)
+   THEN
+      raise_application_error(-20000,'notes have to be between 0 and 20');
+   END IF;
+END ;
+/
+
+
+
+DECLARE
+   c_code_e ETUDIANT.code_e%type;
+
+
+
+   c_bda notes.code_m%type;
+   c_pwa notes.code_m%type;
+   c_ms notes.code_m%type;
+   c_bda_coef module.coefficient%type;
+   c_pwa_coef module.coefficient%type;
+   c_ms_coef module.coefficient%type;
+
+
+   CURSOR c_etudiant is
+      SELECT code_e FROM ETUDIANT;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('hello');
+     select coefficient into c_bda_coef from module where code_m='BDA' ;
+      select coefficient into c_pwa_coef from module where code_m='PWA' ;
+      select coefficient into c_ms_coef from module where  code_m='MS' ;
+
+   OPEN c_etudiant;
+   LOOP
+          EXIT WHEN c_etudiant%notfound;
+
+   FETCH c_etudiant into c_code_e;
+    DBMS_OUTPUT.PUT_LINE(c_code_e);
+
+      select note into c_bda from notes where code_e=c_code_e and code_m='BDA' ;
+      select note into c_pwa from notes where code_e=c_code_e and code_m='PWA' ;
+      select note into c_ms from notes where code_e=c_code_e and code_m='MS' ;
+         DBMS_OUTPUT.PUT_LINE(c_bda*c_bda_coef+c_pwa*c_pwa_coef+c_ms*c_ms_coef);
+      update etudiant set moyenne =(c_bda*c_bda_coef+c_pwa*c_pwa_coef+c_ms*c_ms_coef)/(c_bda_coef+c_pwa_coef+c_ms_coef) where code_e=c_code_e;
+
+      X
+
+
+   END LOOP;
+   CLOSE c_etudiant;
+END;
+/

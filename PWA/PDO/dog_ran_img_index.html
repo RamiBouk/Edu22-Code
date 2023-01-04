@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Index</title>
+	</head>
+	<body>
+		<img src="" alt="">
+	</body>
+	<script>
+		let body=document.getElementsByTagName("body")[0]
+		const xhr = new XMLHttpRequest(); 
+		console.log(body.innerHTML);
+		xhr.addEventListener("readystatechange", function () {
+		if (this.readyState ==4) {
+			let response=JSON.parse(this.responseText)
+		body.innerHTML+=`<img src="${response.message}" alt="err" style="float:left;width:420px;">`
+		}});
+	xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
+	xhr.send();
+	</script>
+</html>

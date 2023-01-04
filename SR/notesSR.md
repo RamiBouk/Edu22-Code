@@ -51,11 +51,11 @@ to exchange information.
 
 
 
-###middleware:
+### middleware:
 - masquer le'heterogeneite des machines et systemes
 - masquer la repatition des donnees et traitment
 
-##caracteristiques:
+## caracteristiques:
 - absence de horloge commune
 - absence de memoire commune
 
@@ -140,7 +140,7 @@ synchroniser
 - le serveur repond.
 - le client recois la reponse ($T_1$).
 - le client utliser le msg recue pour mettre a joiur son horloge.
-- il y a des erreurs de precision, une estimation est:$(T_1-T_0)/2$
+- il y a des erreurs de precision, une estimation est: $(T_1-T_0)/2$
 - $T_{client}=T_{serveur}+(T_1-T_2)/2$
 ### Temps physique: Algorithme de Berkeley (centralise)
 - un $P_i$ est elu comme un serveur refrence de temps
@@ -155,7 +155,7 @@ synchroniser
 - creer un temps qui n'est pas lie au temps physique
 - cree une ordonnancement logique en fonction des evenements
 ### Temps logique: Chronogramme
-${\large e} xy$ avec:
+${\large e}_{ xy}$ avec:
 - $x$ le numero du P 
 - $y$ numero de l'evenement
 ### Temps logique: dependanc causale
@@ -167,18 +167,28 @@ ${\large e} xy$ avec:
   - e est l'emission d'un message, e'est la reception de ce message
   - il exist: $e \to f \land f \to e'$
 - Evenements concurrents:
-$$14444444444444
-e \mid\mid e'
+$$e \mid\mid e'
 \iff
 \overline{e\to e'} \land \overline{e'\to e}
 $$
 # chapitre 3
 ## Horloge de Lamport
+everyone runs their clock unless they get a message from a process that
+has a higher clock then increse it by one and use it
+- no FIFO no Causale
 ## Horloge de Mattern
 each process sends it's view on the other processes clocks as well with
-ech message
+each message
+
+
+
+
 ## Horloge Matercialle
-##Prtocole Birman-Shiper-Stephenson
+you know the way it works 
+
+in the reception check: $[i,j]\ and\ k \neq i :[k,j]<[k,j]$
+
+## Prtocole Birman-Shiper-Stephenson
 it's a combination of matern and matricial
 - les Ps se tamettent les messages par diffusion
 - L'implementaiton du protocole est onde dur les regles siuants:
